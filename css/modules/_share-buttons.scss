@@ -1,0 +1,120 @@
+.resp-sharing-button {
+	display: inline-block;
+  	border-radius: 5px;
+  	border-width: 1px;
+  	border-style: solid;
+	transition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;
+	margin: 0.5em;
+  	padding: 0.5em 0.75em;
+  	font-family: "Source Sans Pro", sans-serif;
+
+	& a {
+		text-decoration: none;
+		color: #FFF;
+		display: block;
+	}
+
+	&--large {
+  		.resp-sharing-button__icon {
+			padding-right: 0.4em;
+  		}
+	}
+
+	&__icon {
+		width: 1em;
+		height: 1em;
+		margin-bottom: -0.1em;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: #FFF;
+	}
+
+	&--twitter {
+		background-color: #55acee;
+		border-color: #55acee;
+		// background-image: url(/img/svg/twitter.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#55acee, 10);
+			border-color: darken(#55acee, 10);
+		}
+	}
+
+	&--pinterest {
+		background-color: #cc2127;
+		border-color: #cc2127;
+		// background-image: url(/img/svg/pinterest.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#cc2127, 10);
+			border-color: darken(#cc2127, 10);
+		}
+	}
+
+	&--facebook {
+		background-color: #3b5998;
+		border-color: #3b5998;
+		// background-image: url(/img/svg/facebook.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#3b5998, 10);
+			border-color: darken(#3b5998, 10);
+		}
+	}
+
+	&--tumblr {
+		background-color: #35465C;
+		border-color: #35465C;
+
+		&:hover,
+		&:active {
+			background-color: darken(#35465C, 10);
+			border-color: darken(#35465C, 10);
+		}
+	}
+
+	&--reddit {
+		background-color: #5f99cf;
+		border-color: #5f99cf;
+		// background-image: url(/img/svg/reddit.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#5f99cf, 10);
+			border-color: darken(#5f99cf, 10);
+		}
+	}
+
+	&--google {
+		background-color: #dd4b39;
+		border-color: #dd4b39;
+		// background-image: url(/img/svg/google-plus.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#dd4b39, 10);
+			border-color: darken(#dd4b39, 10);
+		}
+	}
+
+	&--linkedin {
+		background-color: #0976b4;
+		border-color: #0976b4;
+		// background-image: url(/img/svg/linkedin.svg);
+
+		&:hover,
+		&:active {
+			background-color: darken(#0976b4, 10);
+			border-color: darken(#0976b4, 10);
+		}
+	}
+
+	&__wrapper {
+		display: inline-block;
+	}
+}

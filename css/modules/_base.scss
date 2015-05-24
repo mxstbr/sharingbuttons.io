@@ -1,0 +1,69 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	color: $text-color;
+	background-color: $background;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#app {
+	@include rem(font-size, 1.6);
+}
+
+.logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.5em 0.75em;
+	z-index: 3;
+	color: white;
+	font-family: Georgia, serif;
+	font-size: 1.4em;
+	margin: 0;
+  	font-weight: 400;
+}
+
+.app__wrapper {
+	width: 100%;
+	max-width: $mobile-breakpoint;
+	margin: 0 auto;
+}
+
+h1 {
+	font-weight: 700;
+}
+
+h2 {
+	font-weight: 400;
+}
+
+h3 {
+	font-weight: 300;
+}
+
+h4 {
+	font-weight: 300;
+}
+
+em {
+	font-weight: 700;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.grid-50 {
+	width: 46%;
+	float: left;
+
+	&:nth-child(even) {
+		margin: 0 2%;
+	}
+
+	&:nth-child(odd) {
+		margin: 0 2%;
+	}
+}

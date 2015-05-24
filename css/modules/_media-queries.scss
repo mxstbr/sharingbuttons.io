@@ -1,0 +1,24 @@
+@media all and (max-width: $mobile-breakpoint) {
+	.generator {
+		&__options {
+			width: 100%;
+			clear: both;
+		}
+
+		&__buttons {
+			width: 100%;
+			clear: both;
+		}
+	}
+
+	.grid-50 {
+		width: 100%;
+		clear: both;
+	}
+}
+
+@media all and (max-width: $mobile-breakpoint / 2) {
+	.generator__network-button {
+		width: 50%;
+	}
+}
