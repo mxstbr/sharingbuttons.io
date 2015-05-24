@@ -1,5 +1,5 @@
-# React.js Boilerplate
+# Responsible Social Sharing Buttons
 
-A basic setup for new React.js projects utilizing the Flux application architecture. The folder structure is there, as well as the needed dependencies and some useful tools to ease the development.
+A web app to quickly generate social sharing buttons that do not track the user.
 
-Simply clone this repo using `git clone git@github.com:mstoiber/react-boilerplate`, run `npm install` and then `npm start` to see your code in the browser!
+Built using `React.js` and utilising the `Flux` application architecture.
