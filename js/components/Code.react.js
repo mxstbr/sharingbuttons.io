@@ -64,7 +64,7 @@ var Code = React.createClass({
 						</code>
 					</pre>
 				</div>
-				<h3 className="generator__stats">You are saving ~<em><span id="kilobytes-saved"></span></em> Kilobytes and <em><span id="requests-saved"></span></em> HTTP Requests!</h3>
+				<h3 className="generator__stats">You are saving ~<em><span id="kilobytes-saved"></span> Kilobytes</em> and <em><span id="requests-saved"></span> HTTP Requests</em>!</h3>
 			</div>
 		);
 	},

@@ -1,4 +1,15 @@
 .footer {
+	padding: 1em 0;
+	margin: 0;
+	margin-top: 1.5em;
+	display: inline-block;
 	width: 100%;
-	height: 15em;
+	border-top: 1px solid $text-color;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+	}
 }

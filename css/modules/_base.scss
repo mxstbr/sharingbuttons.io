@@ -28,9 +28,17 @@ body {
 }
 
 .app__wrapper {
-	width: 100%;
+	width: 96%;
 	max-width: $mobile-breakpoint;
 	margin: 0 auto;
+	padding: 0 2%;
+
+	&:after {
+		content: "";
+		clear: both;
+		height: 0;
+		display: block;
+	}
 }
 
 h1 {
@@ -56,14 +64,15 @@ em {
 }
 
 .grid-50 {
-	width: 46%;
+	width: 48%;
 	float: left;
+	margin: 0 2%;
 
 	&:nth-child(even) {
-		margin: 0 2%;
+		margin-left: 0;
 	}
 
 	&:nth-child(odd) {
-		margin: 0 2%;
+		margin-right: 0;
 	}
 }

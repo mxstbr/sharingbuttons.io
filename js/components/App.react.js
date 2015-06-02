@@ -31,27 +31,26 @@ var App = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<a href="http://mxstbr.com" onClick={ function() {_gaq.push(['_trackEvent', 'logo', 'click'])} }>
+				<a href="http://twitter.com/mxstbr" onClick={ function() {_gaq.push(['_trackEvent', 'logo', 'click'])} }>
 					<h1 className="logo">&lt;mxstbr/&gt;</h1>
 				</a>
 				<div className="header">
-					<h1 className="header__title">Responsible Social Sharing Buttons</h1>
-					<h2 className="header__tagline">Quickly generate social sharing buttons with a tiny performance footprint.</h2>
+					<h1 className="header__title">sharingbuttons.io</h1>
+					<h2 className="header__tagline">Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.</h2>
 				</div>
 				<div className="app__wrapper">
 					<Generator data={this.state} />
 					<div className="grid-50">
 						<h2>Why?</h2>
-						<p>Including default sharing scripts from multiple social networks quickly adds a lot of overhead to your website — not to mention the horrible practice of tracking users across the web.</p>
-						<p>Inspired by Jonathan Suhs article “<a href="https://jonsuh.com/blog/social-share-links/">Responsible Social Share Links</a>”, I built this web app to quickly generate social share buttons with a tiny performance footprint.</p>
+						<p>Default social media sharing scripts are big, often download multiple files and track users across the web. This generator outputs social media sharing buttons that do not use JavaScript, which means they are incredibly fast, only use a single HTTP request and they do not track the user. (Also, they look quite nice.)</p>
 					</div>
 					<div className="grid-50">
 						<h2>How?</h2>
 						<p>Simply enter the URL and text you want to share, the social networks you want to include and choose one of the sizes. Then you only have to copy and paste the code generated below into your <code>.html</code> file.</p>
-						<p>The buttons are sized using <code>em</code> units, so if they are too big on your site, change the <code>font-size</code> property of the <code>.resp-sharing-button</code> class to a smaller percentage, e.g. 80%.</p>
+						<p>The buttons are sized using <code>em</code> units, so if they are too big on your site simply change the <code>font-size</code> property of the <code>.resp-sharing-button</code> class to a smaller percentage, e.g. 80%.</p>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
 			</div>
 		);
 	},
