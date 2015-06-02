@@ -9,6 +9,7 @@ _data = {
 	"text": "Quickly generate responsible social sharing buttons.",
 	"style": ".resp-sharing-button {\ndisplay: inline-block;\nborder-radius: 5px;\nborder-width: 1px;\nborder-style: solid;\ntransition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;\nmargin: 0.5em;\npadding: 0.5em 0.75em;\nfont-family: 'Source Sans Pro', sans-serif; }\n.resp-sharing-button a {\n  text-decoration: none;\n  color: #FFF;\n  display: block; }\n.resp-sharing-button--large .resp-sharing-button__icon {\n  padding-right: 0.4em; }\n.resp-sharing-button__icon {\n  width: 1em;\n  height: 1em;\n  margin-bottom: -0.1em; }\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #FFF; }",
 	"sizes": {
+		"tiny": false,
 		"small": false,
 		"medium": false,
 		"large": true

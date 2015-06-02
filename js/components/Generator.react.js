@@ -28,7 +28,7 @@ var Generator = React.createClass({
 		for (var network in networks) {
 			networkButtons.push(<NetworkButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
 			if (networks[network].visible === true) {
-				socialButtons.push(<SocialButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } size={ size } />)
+				socialButtons.push(<SocialButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ size } />)
 			}
 		}
 
