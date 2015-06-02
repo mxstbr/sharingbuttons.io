@@ -5,5 +5,6 @@ module.exports = keyMirror({
     TOGGLE_NETWORK: null,
     SET_URL: null,
     SET_TEXT: null,
-    CHANGE_SIZE: null
+    CHANGE_SIZE: null,
+    CHANGE_ICON: null
 });

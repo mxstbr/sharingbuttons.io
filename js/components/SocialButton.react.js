@@ -11,6 +11,7 @@ var SocialButton = React.createClass({
 		var text = this.props.text;
 		var url = this.props.url;
 		var id = this.props.id;
+		var icon = this.props.icon;
 		var shareText;
 		var href;
 		var button = [];
@@ -19,16 +20,16 @@ var SocialButton = React.createClass({
 		switch(this.props.size) {
 			case "small":
 				shareText = "";
-				var source = '/img/svg/' + id.toLowerCase() + '.svg';
-				img.push(<InlineSvg key={ id + '-button__img' } src={ source } className="resp-sharing-button__icon"/>);
+				var source = '/img/svg/' + icon + '/' + id.toLowerCase() + '.svg';
+				img.push(<InlineSvg key={ id + '-button__img' + icon } src={ source } className="resp-sharing-button__icon"/>);
 				break;
 			case "medium":
 				shareText = "Share on " + name;
 				break;
 			case "large":
 				shareText = "Share on " + name;
-				var source = '/img/svg/' + id.toLowerCase() + '.svg';
-				img.push(<InlineSvg key={ id + '-button__img' } src={ source } className="resp-sharing-button__icon"/>);
+				var source = '/img/svg/' + icon + '/' + id.toLowerCase() + '.svg';
+				img.push(<InlineSvg key={ id + '-button__img' + icon } src={ source } className="resp-sharing-button__icon"/>);
 				break;
 		}
 

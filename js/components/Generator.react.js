@@ -11,14 +11,25 @@ var Generator = React.createClass({
 		var url = data.url;
 		var sizes = data.sizes;
 		var networks = data.networks;
+		var icons = data.icons;
 		var style = data.style;
+
 		var networkButtons = [];
 		var socialButtons = [];
 		var sizeOptions = [];
+		var iconOptions = [];
 		var size;
+		var selectedIcon;
+
+		for (var icon in icons) {
+			iconOptions.push(<option key={ "icon-option--" + icon } value={icon}>{icon}</option>);
+			if (icons[icon] === true) {
+				selectedIcon = icon;
+			}
+		}
 
 		for (var option in sizes) {
-			sizeOptions.push(<option size={ option } key={ "size-option--" + option } value={option}>{option}</option>);
+			sizeOptions.push(<option key={ "size-option--" + option } value={option}>{option}</option>);
 			if (sizes[option] === true) {
 				size = option;
 			}
@@ -27,7 +38,7 @@ var Generator = React.createClass({
 		for (var network in networks) {
 			networkButtons.push(<NetworkButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
 			if (networks[network].visible === true) {
-				socialButtons.push(<SocialButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ size } />)
+				socialButtons.push(<SocialButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ size } icon={selectedIcon} />)
 			}
 		}
 
@@ -57,13 +68,21 @@ var Generator = React.createClass({
 							</select>
 						</div>
 					</div>
+					<h3>Icon</h3>
+					<div className="generator__icons">
+						<div className="select">
+							<select aria-label="Select icon type" value={selectedIcon} onChange={this._changeIcon} >
+								{ iconOptions }
+							</select>
+						</div>
+					</div>
 				</div>
 				<div className="generator__buttons">
 					<h3>Preview</h3>
 					{ socialButtons }
 				</div>
 				<hr />
-				<Code url={url} text={text} networks={networks} size={size} style={style} />
+				<Code url={url} text={text} networks={networks} size={size} style={style} icon={selectedIcon} />
 			</div>
 		);
 	},
@@ -74,8 +93,10 @@ var Generator = React.createClass({
 		AppActions.setText(evt.target.value);
 	},
 	_changeSize: function(evt) {
-		var elem = this.getDOMNode();
 		AppActions.changeSize(evt.target.value.toLowerCase());
+	},
+	_changeIcon: function(evt) {
+		AppActions.changeIcon(evt.target.value.toLowerCase());
 	}
 });
 

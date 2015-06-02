@@ -25,6 +25,12 @@ var AppActions = {
 			actionType: AppConstants.CHANGE_SIZE,
 			size: size
 		});
+	},
+	changeIcon: function(icon) {
+		AppDispatcher.handleAction({
+			actionType: AppConstants.CHANGE_ICON,
+			icon: icon
+		});
 	}
 };
 

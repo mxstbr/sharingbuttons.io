@@ -12,6 +12,7 @@ var Code = React.createClass({
 		var url = this.props.url;
 		var networks = this.props.networks;
 		var style = '<style>\n' + this.props.style;
+		var icon = this.props.icon;
 		var $html = $('.code__html');
 		var kilobytesNormally = 0; // See https://jonsuh.com/blog/social-share-links/, Google+, Facebook, Linkedin, Pinterest then Twitter
 		var savedRequests = 0;
@@ -27,13 +28,13 @@ var Code = React.createClass({
 				code += '<div class="resp-sharing-button resp-sharing-button--' + network.toLowerCase() + ' resp-sharing-button--' + this.props.size + '">\n    ';
 				switch(this.props.size) {
 					case "small":
-						shareText = networks[network].img;
+						shareText = '<div class="resp-sharing-button__icon">' + networks[network].icons[icon] + '</div>';
 						break;
 					case "medium":
 						shareText = "Share on " + networks[network].name;
 						break;
 					case "large":
-						shareText = networks[network].img + "Share on " + networks[network].name;
+						shareText = '<div class="resp-sharing-button__icon">' + networks[network].icons[icon] + '</div>' + "Share on " + networks[network].name;
 						break;
 				}
 				code += shareText + '\n</div>\n';
