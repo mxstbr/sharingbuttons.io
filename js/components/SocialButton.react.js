@@ -17,7 +17,6 @@ var SocialButton = React.createClass({
 		var img = [];
 
 		switch(this.props.size) {
-			case "tiny":
 			case "small":
 				shareText = "";
 				var source = '/img/svg/' + id.toLowerCase() + '.svg';

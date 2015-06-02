@@ -283,13 +283,6 @@ em {
     .resp-sharing-button--linkedin:hover, .resp-sharing-button--linkedin:active {
       background-color: #075683;
       border-color: #075683; }
-  .resp-sharing-button--tiny {
-    padding: 0;
-    border: 0;
-    height: 1em; }
-    .resp-sharing-button--tiny .resp-sharing-button__icon svg {
-      margin-bottom: 0;
-      fill: currentColor; }
   .resp-sharing-button--large .resp-sharing-button__icon svg {
     padding-right: 0.4em; }
   .resp-sharing-button__wrapper {

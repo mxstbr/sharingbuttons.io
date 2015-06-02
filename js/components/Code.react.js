@@ -26,7 +26,6 @@ var Code = React.createClass({
 				code += '" target="_blank">';
 				code += '<div class="resp-sharing-button resp-sharing-button--' + network.toLowerCase() + ' resp-sharing-button--' + this.props.size + '">\n    ';
 				switch(this.props.size) {
-					case "tiny":
 					case "small":
 						shareText = networks[network].img;
 						break;

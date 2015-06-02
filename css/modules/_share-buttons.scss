@@ -112,17 +112,6 @@
 		}
 	}
 
-	&--tiny {
-		padding: 0;
-		border: 0;
-		height: 1em;
-
-		.resp-sharing-button__icon svg {
-			margin-bottom: 0;
-			fill: currentColor;
-		}
-	}
-
 	&--large {
   		.resp-sharing-button__icon svg {
 			padding-right: 0.4em;
