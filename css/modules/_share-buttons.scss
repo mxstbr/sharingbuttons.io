@@ -1,3 +1,6 @@
+//
+// SHARE BUTTONS
+//
 .resp-sharing-button {
 	display: inline-block;
   	border-radius: 5px;
@@ -14,13 +17,8 @@
 		display: block;
 	}
 
-	&--large {
-  		.resp-sharing-button__icon {
-			padding-right: 0.4em;
-  		}
-	}
-
-	&__icon {
+	&__icon svg {
+		fill: #FFF;
 		width: 1em;
 		height: 1em;
 		margin-bottom: -0.1em;
@@ -114,7 +112,25 @@
 		}
 	}
 
+	&--tiny {
+		padding: 0;
+		border: 0;
+		height: 1em;
+
+		.resp-sharing-button__icon svg {
+			margin-bottom: 0;
+			fill: currentColor;
+		}
+	}
+
+	&--large {
+  		.resp-sharing-button__icon svg {
+			padding-right: 0.4em;
+  		}
+	}
+
 	&__wrapper {
 		display: inline-block;
 	}
 }
+// SHARE BUTTONS END
