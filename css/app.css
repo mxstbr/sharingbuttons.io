@@ -153,7 +153,8 @@ em {
     display: inline-block;
     width: 100%; }
   .generator__form {
-    overflow: auto; }
+    overflow: auto;
+    margin-bottom: 0.5em; }
     .generator__form label {
       display: block;
       margin: 0.5em 0; }
@@ -179,12 +180,17 @@ em {
     margin: 0.3em 0; }
     .generator__network-button input[type="checkbox"] {
       margin-right: 0.3em; }
-  .generator__sizes label {
-    width: 48%;
-    margin: 2%;
-    margin-left: 0; }
-  .generator__sizes input[type="radio"] {
-    margin-right: 0.3em; }
+  .generator__sizes {
+    float: left; }
+    .generator__sizes label {
+      width: 48%;
+      margin: 2%;
+      margin-left: 0; }
+    .generator__sizes input[type="radio"] {
+      margin-right: 0.3em; }
+  .generator__icons {
+    float: left;
+    margin-left: 3em; }
   .generator hr {
     width: 100%;
     margin: 3em 0;

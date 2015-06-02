@@ -30,6 +30,8 @@
 
 	&__form {
 		overflow: auto;
+        margin-bottom: 0.5em;
+        
 		label {
 			display: block;
 			margin: 0.5em 0;
@@ -71,6 +73,7 @@
 	}
 
 	&__sizes {
+        float: left;
 		label {
 			width: 48%;
 			margin: 2%;
@@ -80,6 +83,11 @@
 			margin-right: 0.3em;
 		}
 	}
+
+    &__icons {
+        float: left;
+        margin-left: 3em;
+    }
 
 	hr {
 		width: 100%;

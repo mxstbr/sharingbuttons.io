@@ -60,16 +60,16 @@ var Generator = React.createClass({
 					<div className="generator__networks">
 						{ networkButtons }
 					</div>
-					<h3>Size</h3>
 					<div className="generator__sizes">
+						<h3>Size</h3>
 						<div className="select">
 							<select aria-label="Select size" value={size} onChange={this._changeSize} >
 								{ sizeOptions }
 							</select>
 						</div>
 					</div>
-					<h3>Icon</h3>
 					<div className="generator__icons">
+						<h3>Icon</h3>
 						<div className="select">
 							<select aria-label="Select icon type" value={selectedIcon} onChange={this._changeIcon} >
 								{ iconOptions }
