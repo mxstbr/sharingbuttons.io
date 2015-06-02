@@ -12,6 +12,7 @@ var Generator = React.createClass({
 		var url = data.url;
 		var sizes = data.sizes;
 		var networks = data.networks;
+		var style = data.style;
 		var networkButtons = [];
 		var socialButtons = [];
 		var sizeOptions = [];
@@ -59,7 +60,7 @@ var Generator = React.createClass({
 					{ socialButtons }
 				</div>
 				<hr />
-				<Code url={url} text={text} networks={networks} size={size} />
+				<Code url={url} text={text} networks={networks} size={size} style={style} />
 			</div>
 		);
 	},

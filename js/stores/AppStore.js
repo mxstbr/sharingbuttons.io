@@ -7,6 +7,7 @@ var _ = require('underscore');
 _data = {
 	"url": "http://sharing.mxstbr.com",
 	"text": "Quickly generate responsible social sharing buttons.",
+	"style": ".resp-sharing-button {\ndisplay: inline-block;\nborder-radius: 5px;\nborder-width: 1px;\nborder-style: solid;\ntransition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;\nmargin: 0.5em;\npadding: 0.5em 0.75em;\nfont-family: 'Source Sans Pro', sans-serif; }\n.resp-sharing-button a {\n  text-decoration: none;\n  color: #FFF;\n  display: block; }\n.resp-sharing-button--large .resp-sharing-button__icon {\n  padding-right: 0.4em; }\n.resp-sharing-button__icon {\n  width: 1em;\n  height: 1em;\n  margin-bottom: -0.1em; }\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #FFF; }",
 	"sizes": {
 		"small": false,
 		"medium": false,
@@ -74,6 +75,7 @@ _data = {
 
 var AppStore = _.extend({}, EventEmitter.prototype, {
 	getData: function() {
+		this._updateLinks();
 		return _data;
 	},
 	_toggleNetwork: function(name) {
@@ -83,9 +85,11 @@ var AppStore = _.extend({}, EventEmitter.prototype, {
 	},
 	_setURL: function(url) {
 		_data.url = url;
+		this._updateLinks();
 	},
 	_setText: function(text) {
 		_data.text = text;
+		this._updateLinks();
 	},
 	_changeSize: function(size) {
 		var sizes = _data.sizes;
@@ -97,6 +101,26 @@ var AppStore = _.extend({}, EventEmitter.prototype, {
 		}
 		_gaq.push(['_trackEvent', 'size', size]);
 		sizes[size] = true;
+	},
+	_updateLinks: function() {
+		var text = encodeURIComponent(_data.text);
+		var url = encodeURIComponent(_data.url);
+
+		var links = {
+			'facebook': 'https://facebook.com/sharer/sharer.php?u=' + url,
+			'twitter': 'https://twitter.com/intent/tweet/?text=' + text + '&url=' + url,
+			'google': 'https://plus.google.com/share?url=' + url,
+			'tumblr': "https://www.tumblr.com/widgets/share/tool?posttype=link&content=" + url + "&title=" + text + "&caption=" + text,
+			'pinterest': 'https://pinterest.com/pin/create/button/?url=' + url + '&summary=' + text,
+			'linkedin': 'https://www.linkedin.com/shareArticle?mini=true&url=' + url + '&summary=' + text,
+			'reddit': 'https://reddit.com/submit/?url=' + url
+		}
+
+		for (network in _data.networks) {
+			_data.networks[network].link = links[network];
+		}
+
+		return true;
 	},
 	emitChange: function() {
 		this.emit('change');
