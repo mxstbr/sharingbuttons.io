@@ -5,8 +5,9 @@ var NetworkButton = React.createClass({
 	render: function() {
 		return (
 			<div className="generator__network-button generator__network-button--active">
-				<label>
+				<label className="control checkbox">
 					<input type="checkbox" onChange={ this._toggleNetwork } checked={ this.props.checked }/>
+					<span className="control-indicator"></span>
 					{ this.props.name }
 				</label>
 			</div>

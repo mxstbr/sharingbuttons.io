@@ -2,7 +2,6 @@ var AppStore = require('../stores/AppStore');
 var AppActions = require('../actions/AppActions');
 var NetworkButton = require('./NetworkButton.react');
 var SocialButton = require('./SocialButton.react');
-var SizeOption = require('./SizeOption.react');
 var Code = require('./Code.react');
 
 var Generator = React.createClass({
@@ -19,7 +18,7 @@ var Generator = React.createClass({
 		var size;
 
 		for (var option in sizes) {
-			sizeOptions.push(<SizeOption size={ option } key={ "size-option--" + option } checked={ sizes[option] } />);
+			sizeOptions.push(<option size={ option } key={ "size-option--" + option } value={option}>{option}</option>);
 			if (sizes[option] === true) {
 				size = option;
 			}
@@ -52,7 +51,11 @@ var Generator = React.createClass({
 					</div>
 					<h3>Size</h3>
 					<div className="generator__sizes">
-						{ sizeOptions }
+						<div className="select">
+							<select aria-label="Select size" value={size} onChange={this._changeSize} >
+								{ sizeOptions }
+							</select>
+						</div>
 					</div>
 				</div>
 				<div className="generator__buttons">
@@ -69,6 +72,10 @@ var Generator = React.createClass({
 	},
 	_setText: function(evt) {
 		AppActions.setText(evt.target.value);
+	},
+	_changeSize: function(evt) {
+		var elem = this.getDOMNode();
+		AppActions.changeSize(evt.target.value.toLowerCase());
 	}
 });
 
