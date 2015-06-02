@@ -1,6 +1,4 @@
-//
-// SHARE BUTTONS
-//
+/* SHARE BUTTONS START */
 .resp-sharing-button {
 	display: inline-block;
   	border-radius: 5px;
@@ -9,7 +7,7 @@
 	transition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;
 	margin: 0.5em;
   	padding: 0.5em 0.75em;
-  	font-family: "Source Sans Pro", sans-serif;
+  	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 
 	& a {
 		text-decoration: none;
@@ -17,11 +15,15 @@
 		display: block;
 	}
 
-	&__icon svg {
-		fill: #FFF;
-		width: 1em;
-		height: 1em;
-		margin-bottom: -0.1em;
+	&__icon {
+		display: inline-block;
+		
+		svg {
+			fill: #FFF;
+			width: 1em;
+			height: 1em;
+			margin-bottom: -0.1em;
+		}
 	}
 
 	&__link {
@@ -122,4 +124,4 @@
 		display: inline-block;
 	}
 }
-// SHARE BUTTONS END
+/* SHARE BUTTONS END */
