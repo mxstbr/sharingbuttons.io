@@ -5,8 +5,8 @@ var AppConstants = require('../constants/AppConstants');
 var _ = require('underscore');
 
 _data = {
-	"url": "http://sharing.mxstbr.com",
-	"text": "Quickly generate responsible social sharing buttons.",
+	"url": "http://sharingbuttons.io",
+	"text": "Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.",
 	"icons": {
 		"normal": true,
 		"oval": false

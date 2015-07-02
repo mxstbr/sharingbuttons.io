@@ -49,11 +49,11 @@ var Generator = React.createClass({
 					<form className="generator__form">
 						<label>
 							<h3>URL</h3>
-							<input name="url" type="url" className="generator__url" placeholder="http://mxstbr.com" onChange={this._setURL} />
+							<input name="url" type="url" className="generator__url" placeholder="http://sharingbuttons.io" onChange={this._setURL} />
 						</label>
 						<label >
 							<h3>Text</h3>
-							<textarea name="text" className="generator__text" placeholder="Quickly generate responsible social sharing buttons." onChange={this._setText}/>
+							<textarea name="text" className="generator__text" placeholder="Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking." onChange={this._setText}/>
 						</label>
 					</form>
 					<h3>Social Networks</h3>
