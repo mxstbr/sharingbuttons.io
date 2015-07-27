@@ -2,7 +2,7 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var AppActions = require('../actions/AppActions');
 var EventEmitter = require('events').EventEmitter;
 var AppConstants = require('../constants/AppConstants');
-var _ = require('underscore');
+var assign = require('react/lib/Object.assign');
 
 /**
  * DATA
@@ -101,7 +101,7 @@ _data = {
 	}
 }
 
-var AppStore = _.extend({}, EventEmitter.prototype, {
+var AppStore = assign({}, EventEmitter.prototype, {
 	// Returns the current data
 	getData: function() {
 		this._updateLinks();
