@@ -3,6 +3,7 @@ var AppActions = require('../actions/AppActions');
 
 var NetworkButton = React.createClass({
 	render: function() {
+		// Render social network checkbox
 		return (
 			<div className="generator__network-button generator__network-button--active">
 				<label className="control checkbox">

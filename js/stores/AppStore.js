@@ -4,6 +4,9 @@ var EventEmitter = require('events').EventEmitter;
 var AppConstants = require('../constants/AppConstants');
 var _ = require('underscore');
 
+/**
+ * DATA
+ */
 _data = {
 	"url": "http://sharingbuttons.io",
 	"text": "Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.",
@@ -99,23 +102,39 @@ _data = {
 }
 
 var AppStore = _.extend({}, EventEmitter.prototype, {
+	// Returns the current data
 	getData: function() {
 		this._updateLinks();
 		return _data;
 	},
+	/**
+	 * Toggles a social network
+	 * @param  {string} name - The name of the network to be toggled
+	 */
 	_toggleNetwork: function(name) {
 		_data.networks[name].visible = !_data.networks[name].visible;
 		_gaq.push(['_trackEvent', 'network', name, _data.networks[name].visible]);
 		AppStore.emitChange();
 	},
+	/**
+	 * Changes the URL that is shared on click
+	 * @param {string} url - The url to be shared
+	 */
 	_setURL: function(url) {
 		_data.url = url;
 		this._updateLinks();
 	},
+	/**
+	 * Changes the text that is shared on click
+	 * @param {string} text - The text to be shared
+	 */
 	_setText: function(text) {
 		_data.text = text;
 		this._updateLinks();
 	},
+	/**
+	 * @param  {string} size - The size of the buttons. Has to be "small", "medium" or "large"
+	 */
 	_changeSize: function(size) {
 		var sizes = _data.sizes;
 
@@ -127,7 +146,11 @@ var AppStore = _.extend({}, EventEmitter.prototype, {
 		_gaq.push(['_trackEvent', 'size', size]);
 		sizes[size] = true;
 	},
-	_changeIcon: function(icon) {
+	/**
+	 * Changes the type of icon used. Has to be "oval" or "normal"
+	 * @param  {string} icon - The icon type
+	 */
+	_changeIcon: function(type) {
 		var icons = _data.icons;
 
 		for (var option in icons) {
@@ -135,8 +158,12 @@ var AppStore = _.extend({}, EventEmitter.prototype, {
 				icons[option] = false;
 			}
 		}
-		icons[icon] = true;
+		icons[type] = true;
 	},
+	/**
+	 * Changes the sharing URLs
+	 * @return {bool}
+	 */
 	_updateLinks: function() {
 		var text = encodeURIComponent(_data.text);
 		var url = encodeURIComponent(_data.url);
@@ -168,6 +195,7 @@ var AppStore = _.extend({}, EventEmitter.prototype, {
 	}
 });
 
+// Catch the events dispatched by the AppDispatcher
 AppDispatcher.register(function(payload) {
 	var action = payload.action;
 
@@ -185,7 +213,7 @@ AppDispatcher.register(function(payload) {
 			AppStore._changeSize(action.size);
 			break;
 		case AppConstants.CHANGE_ICON:
-			AppStore._changeIcon(action.icon);
+			AppStore._changeIcon(action.type);
 			break;
 		default:
 			return false;

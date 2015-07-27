@@ -3,6 +3,7 @@ var AppActions = require('../actions/AppActions');
 
 var Code = React.createClass({
 	componentDidMount: function() {
+		// Select the text on-click
 		var $elem = $(this.getDOMNode());
 		$elem.children().click(this._selectText);
 		this.componentDidUpdate();
@@ -18,6 +19,7 @@ var Code = React.createClass({
 		var savedRequests = 0;
 		var code = "";
 
+		// Piece together the code to be copied and calculate the savings
 		for (network in networks) {
 			if (networks[network].visible === true) {
 				kilobytesNormally += networks[network].scriptSize;
@@ -26,6 +28,7 @@ var Code = React.createClass({
 				code += networks[network].link;
 				code += '" target="_blank">';
 				code += '<div class="resp-sharing-button resp-sharing-button--' + network.toLowerCase() + ' resp-sharing-button--' + this.props.size + '">\n    ';
+				// Adjust the code based on the button size
 				switch(this.props.size) {
 					case "small":
 						shareText = '<div class="resp-sharing-button__icon">' + networks[network].icons[icon] + '</div>';
@@ -47,14 +50,17 @@ var Code = React.createClass({
 		code += style;
 		code += "\n</style>";
 
+		// Calculate the saved kB
 		var savedKilobytes = parseFloat(kilobytesNormally - this._getByteCount(code) / 1000).toFixed(2);
 		$('#kilobytes-saved').text(savedKilobytes);
 		$('#requests-saved').text(savedRequests);
+		// Change the code block
 		$html.text(code);
+		// Highlight the code
 		hljs.highlightBlock($html[0]);
 	},
 	render: function() {
-
+		// Render code block in Generator
 		return (
 			<div>
 				<h3 className="generator__code-heading">Code</h3>
@@ -68,6 +74,7 @@ var Code = React.createClass({
 			</div>
 		);
 	},
+	// Select the code on click
 	_selectText: function(evt) {
 	    var doc = document;
 	    var text = $(this.getDOMNode()).find("code")[0];
@@ -84,6 +91,7 @@ var Code = React.createClass({
 	        selection.addRange(range);
 	    }
 	},
+	// Gets the length of a string in bytes
 	_getByteCount: function(string) {
 	    return encodeURI(string).split(/%..|./).length - 1;
 	}

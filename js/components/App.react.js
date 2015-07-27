@@ -9,14 +9,16 @@ var App = React.createClass({
 		return AppStore.getData();
 	},
 	componentDidMount: function() {
+		// Analytics
 		_gaq.push(['_trackPageview']);
 		_gaq.push(['_trackEvent', 'page', 'visible']);
+		// Fade the website in
 		var $elem = $(this.getDOMNode());
-
 		$elem.css("opacity", "0");
 		setTimeout(function() {
 			$elem.css("transition", "opacity 250ms");
 			$elem.css("opacity", "1");
+			// And the loading spinner out
 			$('.spinner-wrapper').css("transition", "opacity 250ms");
 			$('.spinner-wrapper').css("opacity", "0");
 			setTimeout(function() {
@@ -29,6 +31,7 @@ var App = React.createClass({
 		AppStore.removeChangeListener(this._onChange);
 	},
 	render: function() {
+		// Render the basic layout and the Generator, found at js/components/Generator.react.js
 		return (
 			<div>
 				<a href="http://twitter.com/mxstbr" onClick={ function() {_gaq.push(['_trackEvent', 'logo', 'click'])} }>

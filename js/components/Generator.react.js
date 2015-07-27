@@ -21,6 +21,7 @@ var Generator = React.createClass({
 		var size;
 		var selectedIcon;
 
+		// Icon size selection
 		for (var icon in icons) {
 			iconOptions.push(<option key={ "icon-option--" + icon } value={icon}>{icon}</option>);
 			if (icons[icon] === true) {
@@ -28,6 +29,7 @@ var Generator = React.createClass({
 			}
 		}
 
+		// Button size selection
 		for (var option in sizes) {
 			sizeOptions.push(<option key={ "size-option--" + option } value={option}>{option}</option>);
 			if (sizes[option] === true) {
@@ -35,6 +37,7 @@ var Generator = React.createClass({
 			}
 		}
 
+		// Social network selection and preview buttons
 		for (var network in networks) {
 			networkButtons.push(<NetworkButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
 			if (networks[network].visible === true) {
@@ -42,6 +45,7 @@ var Generator = React.createClass({
 			}
 		}
 
+		// Render the Generator
 		return (
 			<div className="generator">
 				<h2 style={ { display: "none" } }>Generator</h2>
@@ -86,15 +90,19 @@ var Generator = React.createClass({
 			</div>
 		);
 	},
+	// Dispatches event to change the shared URL
 	_setURL: function(evt) {
 		AppActions.setURL(evt.target.value);
 	},
+	// Dispatches event to change the shared text
 	_setText: function(evt) {
 		AppActions.setText(evt.target.value);
 	},
+	// Dispatches event to change the button size
 	_changeSize: function(evt) {
 		AppActions.changeSize(evt.target.value.toLowerCase());
 	},
+	// Dispatches event to change icon type
 	_changeIcon: function(evt) {
 		AppActions.changeIcon(evt.target.value.toLowerCase());
 	}

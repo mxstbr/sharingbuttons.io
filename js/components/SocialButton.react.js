@@ -17,6 +17,7 @@ var SocialButton = React.createClass({
 		var button = [];
 		var img = [];
 
+		// Change the button text and image based on selection
 		switch(this.props.size) {
 			case "small":
 				shareText = "";
@@ -33,6 +34,7 @@ var SocialButton = React.createClass({
 				break;
 		}
 
+		// Render preview button
 		return (
 			<div className="resp-sharing-button__wrapper">
 				<a className="resp-sharing-button__link"
