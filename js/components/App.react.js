@@ -9,9 +9,6 @@ var App = React.createClass({
 		return AppStore.getData();
 	},
 	componentDidMount: function() {
-		// Analytics
-		_gaq.push(['_trackPageview']);
-		_gaq.push(['_trackEvent', 'page', 'visible']);
 		// Fade the website in
 		var $elem = $(this.getDOMNode());
 		$elem.css("opacity", "0");
@@ -34,7 +31,7 @@ var App = React.createClass({
 		// Render the basic layout and the Generator, found at js/components/Generator.react.js
 		return (
 			<div>
-				<a href="http://twitter.com/mxstbr" onClick={ function() {_gaq.push(['_trackEvent', 'logo', 'click'])} }>
+				<a href="http://twitter.com/mxstbr" onClick={ function() {OWATracker.trackAction('logo', 'click');} }>
 					<h1 className="logo">&lt;mxstbr/&gt;</h1>
 				</a>
 				<div className="header">

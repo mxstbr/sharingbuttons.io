@@ -113,7 +113,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 	 */
 	_toggleNetwork: function(name) {
 		_data.networks[name].visible = !_data.networks[name].visible;
-		_gaq.push(['_trackEvent', 'network', name, _data.networks[name].visible]);
+		OWATracker.trackAction('network', name, _data.networks[name].visible.toString());
 		AppStore.emitChange();
 	},
 	/**
@@ -143,7 +143,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 				sizes[option] = false;
 			}
 		}
-		_gaq.push(['_trackEvent', 'size', size]);
+		OWATracker.trackAction('network', 'size', size);
 		sizes[size] = true;
 	},
 	/**
