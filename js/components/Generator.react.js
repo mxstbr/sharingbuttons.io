@@ -1,6 +1,7 @@
 var NetworkButton = require('./NetworkButton.react');
 var SocialButton = require('./SocialButton.react');
 var Code = require('./Code.react');
+var AppActions = require('../actions/AppActions');
 
 var Generator = React.createClass({
 	render: function() {
