@@ -1,5 +1,4 @@
 var AppStore = require('../stores/AppStore');
-var AppActions = require('../actions/AppActions');
 var Generator = require('./Generator.react');
 var Footer = require('./Footer.react');
 

@@ -1,5 +1,3 @@
-var AppStore = require('../stores/AppStore');
-var AppActions = require('../actions/AppActions');
 var NetworkButton = require('./NetworkButton.react');
 var SocialButton = require('./SocialButton.react');
 var Code = require('./Code.react');

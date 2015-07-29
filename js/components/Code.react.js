@@ -1,6 +1,3 @@
-var AppStore = require('../stores/AppStore');
-var AppActions = require('../actions/AppActions');
-
 var Code = React.createClass({
 	componentDidMount: function() {
 		// Select the text on-click

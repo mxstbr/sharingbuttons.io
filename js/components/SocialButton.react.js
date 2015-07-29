@@ -1,5 +1,3 @@
-var AppStore = require('../stores/AppStore');
-var AppActions = require('../actions/AppActions');
 var InlineSvg = require('react-inlinesvg');
 
 var SocialButton = React.createClass({

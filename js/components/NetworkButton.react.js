@@ -1,4 +1,3 @@
-var AppStore = require('../stores/AppStore');
 var AppActions = require('../actions/AppActions');
 
 var NetworkButton = React.createClass({

@@ -1,7 +1,6 @@
 window.React = require('react');
 window.jQuery = window.$ = require('jquery');
 var App = require('./components/App.react');
-var AppActions = require("./actions/AppActions");
 
 // Check if the user is on mobile
 window.mobilecheck = mobilecheck();
@@ -13,7 +12,7 @@ function mobilecheck() {
 
 React.initializeTouchEvents(true);
 
-// Render the desktop component (js/components/Desktop.react.js)
+// Render the app component (js/components/App.react.js)
 React.render(
 	<App />,
 	document.getElementById('app')
