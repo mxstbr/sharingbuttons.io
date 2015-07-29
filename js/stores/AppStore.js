@@ -113,7 +113,9 @@ var AppStore = assign({}, EventEmitter.prototype, {
 	 */
 	_toggleNetwork: function(name) {
 		_data.networks[name].visible = !_data.networks[name].visible;
-		OWATracker.trackAction('network', name, _data.networks[name].visible.toString());
+		if (OWATracker !== undefined) {
+			OWATracker.trackAction('network', name, _data.networks[name].visible.toString());
+		}
 		AppStore.emitChange();
 	},
 	/**
@@ -143,7 +145,9 @@ var AppStore = assign({}, EventEmitter.prototype, {
 				sizes[option] = false;
 			}
 		}
-		OWATracker.trackAction('network', 'size', size);
+		if (OWATracker !== undefined) {
+			OWATracker.trackAction('network', 'size', size);
+		}
 		sizes[size] = true;
 	},
 	/**
