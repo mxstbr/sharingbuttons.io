@@ -7,7 +7,7 @@ var assign = require('react/lib/Object.assign');
 /**
  * DATA
  */
-_data = {
+var _data = {
 	"url": "http://sharingbuttons.io",
 	"text": "Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.",
 	"icons": {
@@ -113,9 +113,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 	 */
 	_toggleNetwork: function(name) {
 		_data.networks[name].visible = !_data.networks[name].visible;
-		if (OWATracker !== undefined) {
-			OWATracker.trackAction('network', name, _data.networks[name].visible.toString());
-		}
+
 		AppStore.emitChange();
 	},
 	/**
@@ -144,9 +142,6 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			if (sizes[option] === true) {
 				sizes[option] = false;
 			}
-		}
-		if (OWATracker !== undefined) {
-			OWATracker.trackAction('network', 'size', size);
 		}
 		sizes[size] = true;
 	},
@@ -182,7 +177,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'reddit': 'https://reddit.com/submit/?url=' + url
 		}
 
-		for (network in _data.networks) {
+		for (var network in _data.networks) {
 			_data.networks[network].link = links[network];
 		}
 

@@ -15,9 +15,10 @@ var Code = React.createClass({
 		var kilobytesNormally = 0; // See https://jonsuh.com/blog/social-share-links/, Google+, Facebook, Linkedin, Pinterest then Twitter
 		var savedRequests = 0;
 		var code = "";
+		var shareText = "";
 
 		// Piece together the code to be copied and calculate the savings
-		for (network in networks) {
+		for (var network in networks) {
 			if (networks[network].visible === true) {
 				kilobytesNormally += networks[network].scriptSize;
 				savedRequests += networks[network].requests;
