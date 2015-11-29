@@ -14,8 +14,6 @@ var PreviewButton = React.createClass({
 				shareText = "";
 				break;
 			case "medium":
-				shareText = "Share on " + name;
-				break;
 			case "large":
 				shareText = "Share on " + name;
 				break;
