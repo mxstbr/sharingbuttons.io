@@ -22,20 +22,44 @@
 	border-right: 1px solid $mid-grey;
 }
 
-.generator__label {
-	width: calc(100% - 2em);
-	float: left;
-	padding: 1em;
-	padding-bottom: 0.5em;
+.generator__settings-field-wrapper {
+	height: 5em;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid $light-grey;
+	padding-top: 1.75em;
 }
 
-.generator__label + .generator__label {
-	padding-top: 0.5em;
+.generator__settings-field-wrapper:hover,
+.generator__settings-field-wrapper:hover .generator__settings-field {
+	background-color: $light-grey;
+	color: $very-dark-grey;
+}
+
+.generator__settings-field-wrapper:hover .generator__label {
+	color: $very-dark-grey;
 }
 
 .generator__settings-field {
-	margin-left: 1em;
-	padding: 0.25em;
+	position: relative;
+	border: none;
+	width: 100%;
+	height: 2.5em;
+	padding: 0 14px;
+	color: $dark-grey;
+	outline: none;
+}
+
+.generator__settings-field:nth-child(1) {
+	border-radius: 3px 0 0 0;
+}
+
+.generator__label {
+	position: absolute;
+	top: 14px;
+	left: 14px;
+	font-size: 0.8em;
+	color: $mid-grey;
 }
 
 .generator__settings-url {

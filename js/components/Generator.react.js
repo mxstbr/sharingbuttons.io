@@ -1,8 +1,7 @@
-var NetworkSelectionButton = require('./NetworkSelectionButton.react');
 var PreviewButton = require('./PreviewButton.react');
-var Code = require('./Code.react');
+var Code = require('./GeneratorCode.react');
 var AppActions = require('../actions/AppActions');
-var GeneratorPreview = require('./GeneratorPreview.react');
+var Preview = require('./GeneratorPreview.react');
 var SelectionButton = require('./SelectionButton.react');
 
 var Generator = React.createClass({
@@ -54,12 +53,16 @@ var Generator = React.createClass({
 			<div className="generator">
 				<div className="generator__inner-wrapper">
 					<div className="generator__settings">
-						<label className="generator__label">URL
-							<input className={"generator__settings-field generator__settings-url"} onChange={this._setURL} value={url} />
-						</label>
-						<label className="generator__label">Text
-							<input className={"generator__settings-field generator__settings-text"} onChange={this._setText} value={text} />
-						</label>
+						<div className="generator__settings-field-wrapper">
+							<input className={"generator__settings-field generator__settings-url"} onChange={this._setURL} value={url}>
+								<label className="generator__label">URL</label>
+							</input>
+						</div>
+						<div className="generator__settings-field-wrapper">
+							<input className={"generator__settings-field generator__settings-text"} onChange={this._setText} value={text}>
+								<label className="generator__label">Text</label>
+							</input>
+						</div>
 						<div className="generator__networks">
 							<h3>Social Networks</h3>
 							{ networkSelectionButtons }
@@ -73,7 +76,7 @@ var Generator = React.createClass({
 							{ iconSelectionButtons }
 						</div>
 					</div>
-					<GeneratorPreview previewButtons={previewButtons} />
+					<Preview previewButtons={previewButtons} />
 				</div>
 				<Code url={url} text={text} networks={networks} size={selectedSize} style={style} icon={selectedIcon} />
 			</div>

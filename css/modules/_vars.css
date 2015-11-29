@@ -6,8 +6,9 @@ $monospace: Menlo, monospace;
 $text-color: #262626;
 $background: #FAFAFA;
 $very-light-grey: #FAFAFA;
-$light-grey: #999;
-$mid-grey: #666;
-$dark-grey: #333;
+$light-grey: #EBEBEB;
+$mid-grey: #999;
+$dark-grey: #666;
+$very-dark-grey: #333;
 
 $button-height: 2em;
