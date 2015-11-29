@@ -82,6 +82,7 @@
 
 .generator__preview .resp-sharing-button {
 	font-size: 0.25em;
+	user-select: none;
 }
 
 .generator__preview .resp-sharing-button svg {
