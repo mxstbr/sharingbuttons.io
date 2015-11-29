@@ -1,8 +1,5 @@
 var Code = React.createClass({
 	componentDidMount: function() {
-		// Select the text on-click
-		var $elem = $(this.getDOMNode());
-		$elem.children().click(this._selectText);
 		this.componentDidUpdate();
 	},
 	componentDidUpdate: function() {
