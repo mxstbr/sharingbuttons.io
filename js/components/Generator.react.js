@@ -12,12 +12,13 @@ var Generator = React.createClass({
 		var sizes = data.sizes;
 		var networks = data.networks;
 		var icons = data.icons;
-		var style = data.style;
 
 		var networkSelectionButtons = [];
 		var previewButtons = [];
 		var sizeSelectionButtons = [];
 		var iconSelectionButtons = [];
+		var HTMLCodeForCurrentButtons = "";
+		var CSSCodeForCurrentButtons = data.generalStyling;
 		var selectedSize;
 		var selectedIcon;
 
@@ -45,6 +46,10 @@ var Generator = React.createClass({
 			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
 				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />)
+				HTMLCodeForCurrentButtons += React.renderToStaticMarkup(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
+				HTMLCodeForCurrentButtons += "\n\n";
+				CSSCodeForCurrentButtons += networks[network].style;
+				CSSCodeForCurrentButtons += "\n";
 			}
 		}
 
@@ -82,7 +87,7 @@ var Generator = React.createClass({
 					</div>
 					<Preview previewButtons={previewButtons} />
 				</div>
-				<Code url={url} text={text} networks={networks} size={selectedSize} style={style} icon={selectedIcon} />
+				<Code networks={networks} HTMLForButtons={HTMLCodeForCurrentButtons} CSSForButtons={CSSCodeForCurrentButtons} />
 			</div>
 		);
 	},

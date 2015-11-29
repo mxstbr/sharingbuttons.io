@@ -14,7 +14,7 @@ var _data = {
 		"normal": true,
 		"oval": false
 	},
-	"style": ".resp-sharing-button {\ndisplay: inline-block;\nborder-radius: 5px;\nborder-width: 1px;\nborder-style: solid;\ntransition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;\nmargin: 0.5em;\npadding: 0.5em 0.75em;\nfont-family: Helvetica Neue,Helvetica,Arial,sans-serif; }\n.resp-sharing-button a {\n  text-decoration: none;\n  color: #FFF;\n  display: block; }\n.resp-sharing-button__icon {\n  display: inline-block; }\n.resp-sharing-button__icon svg {\n  fill: #FFF;\n  width: 1em;\n  height: 1em;\n  margin-bottom: -0.1em; }\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #FFF; }\n.resp-sharing-button--large .resp-sharing-button__icon svg {\n  padding-right: 0.4em; }\n.resp-sharing-button__wrapper {\n  display: inline-block; }",
+	"generalStyling": ".resp-sharing-button {\ndisplay: inline-block;\nborder-radius: 5px;\nborder-width: 1px;\nborder-style: solid;\ntransition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;\nmargin: 0.5em;\npadding: 0.5em 0.75em;\nfont-family: Helvetica Neue,Helvetica,Arial,sans-serif; }\n.resp-sharing-button a {\n  text-decoration: none;\n  color: #FFF;\n  display: block; }\n.resp-sharing-button__icon {\n  display: inline-block; }\n.resp-sharing-button__icon svg {\n  fill: #FFF;\n  width: 1em;\n  height: 1em;\n  margin-bottom: -0.1em; }\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #FFF; }\n.resp-sharing-button--large .resp-sharing-button__icon svg {\n  padding-right: 0.4em; }\n.resp-sharing-button__wrapper {\n  display: inline-block; }",
 	"sizes": {
 		"small": false,
 		"medium": false,
