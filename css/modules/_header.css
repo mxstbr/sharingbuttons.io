@@ -10,6 +10,23 @@
   text-decoration: none;
   font-size: 1.5em;
   font-weight: 400;
+  z-index: 10;
+}
+
+.github-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: $background;
+  z-index: 10;
+}
+
+.github-corner__bg {
+  fill: $mid-grey;
+}
+
+.octo-arm {
+  transform-origin: 130px 106px
 }
 
 .header {
