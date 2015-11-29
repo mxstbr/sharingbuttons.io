@@ -581,8 +581,8 @@ em {
     display: inline-block; }
     .resp-sharing-button__icon svg {
       fill: #FFF;
-      width: 1em;
-      height: 1em;
+      width: 1.2em;
+      height: 1.2em;
       margin-bottom: -0.1em; }
   .resp-sharing-button__link {
     text-decoration: none;
