@@ -4,7 +4,7 @@
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
-	transition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;
+	transition: background-color 25ms ease-out, border-color 25ms ease-out, opacity 250ms ease-out;
 	margin: 0.5em;
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
