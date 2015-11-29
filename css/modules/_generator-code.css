@@ -30,6 +30,7 @@
 	font-family: $monospace;
 	font-size: 1.2rem;
 	border-radius: 0 0 5px 5px;
+	min-height: 25em;
 }
 
 .generator__code-stats {
