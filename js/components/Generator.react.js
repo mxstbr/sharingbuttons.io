@@ -60,11 +60,11 @@ var Generator = React.createClass({
 					<div className="generator__settings">
 						<div className="generator__settings-field-wrapper generator__settings-field-wrapper--hover">
 							<label className="generator__settings-section-heading" htmlFor="url">URL</label>
-							<input className={"generator__settings-field generator__settings-url"} id="url" onChange={this._setURL} value={url} />
+							<input className="generator__settings-field generator__settings-url" id="url" onChange={this._setURL} value={url} />
 						</div>
 						<div className="generator__settings-field-wrapper generator__settings-field-wrapper--hover">
 							<label className="generator__settings-section-heading" htmlFor="text">Text</label>
-							<input className={"generator__settings-field generator__settings-text"} id="text" onChange={this._setText} value={text} />
+							<input className="generator__settings-field generator__settings-text" id="text" onChange={this._setText} value={text} />
 						</div>
 						<div className="generator__settings-field-wrapper">
 							<h3 className="generator__settings-section-heading">Social Networks</h3>

@@ -29,6 +29,10 @@
 	padding-bottom: 1.625em;
 }
 
+.generator__settings-field-wrapper--hover {
+	cursor: text;
+}
+
 .generator__settings-field-wrapper--hover:hover,
 .generator__settings-field-wrapper--hover:hover .generator__settings-field {
 	background-color: $light-grey;
@@ -64,6 +68,11 @@
 	color: $mid-grey;
 	font-weight: 400;
 	user-select: none;
+	cursor: default;
+}
+
+.generator__settings-field-wrapper--hover .generator__settings-section-heading {
+	cursor: text;
 }
 
 .generator__radiobutton {
