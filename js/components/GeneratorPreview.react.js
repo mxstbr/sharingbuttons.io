@@ -20,13 +20,6 @@ var GeneratorPreview = React.createClass({
           <div className="generator__preview-fake-text" />
           <div className="generator__preview-fake-text" />
           <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
-          <div className="generator__preview-fake-text" />
           <div className="generator__preview-button-wrapper">
             { this.props.previewButtons }
           </div>
