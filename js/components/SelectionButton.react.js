@@ -8,11 +8,22 @@ var SelectionButton = React.createClass({
     }
 
     return(
-      <div className={className}
-            onClick={this.props.selectOption}>
-              {element.charAt(0).toUpperCase() + element.slice(1)}
+      <div  className={className}
+            onClick={this._selectOption}
+            dangerouslySetInnerHTML={this._createMarkup(element.charAt(0).toUpperCase() + element.slice(1))}>
       </div>
     );
+  },
+  _createMarkup: function(string) {
+    return { __html: string };
+  },
+  _selectOption: function() {
+    if (this.props.nameInState !== undefined) {
+      name = this.props.nameInState;
+    } else {
+      name = this.props.element;
+    }
+    this.props.selectOption(name);
   }
 });
 

@@ -23,43 +23,45 @@
 }
 
 .generator__settings-field-wrapper {
-	height: 5em;
 	width: 100%;
 	position: relative;
-	border-bottom: 1px solid $light-grey;
 	padding-top: 1.75em;
+	border-bottom: 1px solid $light-grey;
 }
 
-.generator__settings-field-wrapper:hover,
-.generator__settings-field-wrapper:hover .generator__settings-field {
+.generator__settings-field-wrapper--hover:hover,
+.generator__settings-field-wrapper--hover:hover .generator__settings-field {
 	background-color: $light-grey;
 	color: $very-dark-grey;
 }
 
-.generator__settings-field-wrapper:hover .generator__label {
+.generator__settings-field-wrapper--hover:hover .generator__settings-section-heading {
 	color: $very-dark-grey;
 }
 
-.generator__settings-field {
-	position: relative;
-	border: none;
-	width: 100%;
-	height: 2.5em;
-	padding: 0 14px;
-	color: $dark-grey;
-	outline: none;
-}
-
-.generator__settings-field:nth-child(1) {
+.generator__settings-field-input:nth-child(1) {
 	border-radius: 3px 0 0 0;
 }
 
-.generator__label {
+.generator__settings-field  {
+	position: relative;
+	padding: 1.625em 16px;
+	width: 100%;
+	color: $dark-grey;
+	border: none;
+	outline: none;
+}
+
+.generator__settings-section-heading {
 	position: absolute;
-	top: 14px;
-	left: 14px;
+	top: 0; left: 0;
+	width: 100%;
+	padding: 16px;
+	padding-top: 20px;
+	z-index: 1;
 	font-size: 0.8em;
 	color: $mid-grey;
+	font-weight: 400;
 }
 
 .generator__settings-url {
@@ -68,36 +70,16 @@
 .generator__settings-text {
 }
 
-.generator__networks {
-	padding-left: 0.5em;
-}
-
 .generator__radiobutton {
 }
 
 .generator__radiobutton--selected {
 }
 
-.generator__radiobutton:first-child {
-	border-left: none;
-
-}
-
-.generator__radio--2 .generator__radiobutton {
-	width: 50%;
-}
-
-.generator__radio--3 .generator__radiobutton {
-	width: 33.33333%;
-}
-
-.generator__icons {
-	margin-bottom: 4em;
-}
-
 .generator:after,
 .generator__settings:after,
-.generator__preview:after {
+.generator__preview:after,
+.generator__settings-field-wrapper:after {
 	content: "";
 	display: block;
 	height: 0;

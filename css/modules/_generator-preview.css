@@ -1,6 +1,6 @@
 .generator__preview {
 	width: 50%;
-	background-color: $mid-grey;
+	background-color: $dark-grey;
 	position: relative;
 	justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 
 .generator__preview-page {
 	background-color: #FFF;
-	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 100);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	max-width: 300px;

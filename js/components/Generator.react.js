@@ -41,10 +41,10 @@ var Generator = React.createClass({
 
 		// Social network selection buttons
 		for (var network in networks) {
-			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].name} selected={networks[network].visible} selectOption={this._toggleNetwork} />)
+			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].icons[selectedIcon]} selected={networks[network].visible} selectOption={this._toggleNetwork} nameInState={network} />)
 			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
-				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={selectedIcon} />)
+				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />)
 			}
 		}
 
@@ -53,27 +53,31 @@ var Generator = React.createClass({
 			<div className="generator">
 				<div className="generator__inner-wrapper">
 					<div className="generator__settings">
-						<div className="generator__settings-field-wrapper">
-							<input className={"generator__settings-field generator__settings-url"} onChange={this._setURL} value={url}>
-								<label className="generator__label">URL</label>
-							</input>
+						<div className="generator__settings-field-wrapper generator__settings-field-wrapper--hover">
+							<label className="generator__settings-section-heading" htmlFor="url">URL</label>
+							<input className={"generator__settings-field generator__settings-url"} id="url" onChange={this._setURL} value={url} />
+						</div>
+						<div className="generator__settings-field-wrapper generator__settings-field-wrapper--hover">
+							<label className="generator__settings-section-heading" htmlFor="text">Text</label>
+							<input className={"generator__settings-field generator__settings-text"} id="text" onChange={this._setText} value={text} />
 						</div>
 						<div className="generator__settings-field-wrapper">
-							<input className={"generator__settings-field generator__settings-text"} onChange={this._setText} value={text}>
-								<label className="generator__label">Text</label>
-							</input>
+							<h3 className="generator__settings-section-heading">Social Networks</h3>
+							<div className="generator__settings-field">
+								{ networkSelectionButtons }
+							</div>
 						</div>
-						<div className="generator__networks">
-							<h3>Social Networks</h3>
-							{ networkSelectionButtons }
+						<div className="generator__settings-field-wrapper">
+							<h3 className="generator__settings-section-heading">Size</h3>
+							<div className="generator__settings-field">
+								{ sizeSelectionButtons }
+							</div>
 						</div>
-						<h3>Size</h3>
-						<div className={"generator__sizes generator__radio--" + sizeOptionAmount}>
-							{ sizeSelectionButtons }
-						</div>
-						<h3>Icon</h3>
-						<div className={"generator__icons generator__radio--" + iconOptionAmount}>
-							{ iconSelectionButtons }
+						<div className="generator__settings-field-wrapper">
+							<h3 className="generator__settings-section-heading">Icon</h3>
+							<div className="generator__settings-field">
+								{ iconSelectionButtons }
+							</div>
 						</div>
 					</div>
 					<Preview previewButtons={previewButtons} />
@@ -91,16 +95,16 @@ var Generator = React.createClass({
 		AppActions.setText(evt.target.value);
 	},
 	// Dispatches event to change the button size
-	_changeSize: function(evt) {
-		AppActions.changeSize(evt.target.textContent.toLowerCase());
+	_changeSize: function(name) {
+		AppActions.changeSize(name);
 	},
 	// Dispatches event to change icon type
-	_changeIcon: function(evt) {
-		AppActions.changeIcon(evt.target.textContent.toLowerCase());
+	_changeIcon: function(name) {
+		AppActions.changeIcon(name);
 	},
 	// Dispatches event to change network selection
-	_toggleNetwork: function(evt) {
-		AppActions.toggleNetwork(evt.target.textContent.toLowerCase());
+	_toggleNetwork: function(name) {
+		AppActions.toggleNetwork(name);
 	}
 });
 

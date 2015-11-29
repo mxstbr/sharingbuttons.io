@@ -1,8 +1,4 @@
-var InlineSvg = require('react-inlinesvg');
-
 var PreviewButton = React.createClass({
-	componentDidMount: function() {
-	},
 	render: function() {
 		var network = this.props.network;
 		var name = network.name;
@@ -11,24 +7,17 @@ var PreviewButton = React.createClass({
 		var id = this.props.id;
 		var icon = this.props.icon;
 		var shareText;
-		var href;
-		var button = [];
-		var img = [];
 
-		// Change the button text and image based on selection
+		// Change the button text based on size
 		switch(this.props.size) {
 			case "small":
 				shareText = "";
-				var source = '/img/svg/' + icon + '/' + id.toLowerCase() + '.svg';
-				img.push(<InlineSvg key={ id + '-button__img' + icon } src={ source } className="resp-sharing-button__icon"/>);
 				break;
 			case "medium":
 				shareText = "Share on " + name;
 				break;
 			case "large":
 				shareText = "Share on " + name;
-				var source = '/img/svg/' + icon + '/' + id.toLowerCase() + '.svg';
-				img.push(<InlineSvg key={ id + '-button__img' + icon } src={ source } className="resp-sharing-button__icon"/>);
 				break;
 		}
 
@@ -40,11 +29,15 @@ var PreviewButton = React.createClass({
 				   href={ network.link }
 				   target="_blank">
 					<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
-						{ img }{ shareText }
+						<div className="resp-sharing-button__icon" dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>
+						{ shareText }
 					</div>
 				</a>
 			</div>
 		);
+	},
+	_makeIcon: function(string) {
+		return { __html: string };
 	}
 });
 
