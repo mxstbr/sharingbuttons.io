@@ -71,15 +71,15 @@ var Code = React.createClass({
 		);
 	},
 	_selectCSS: function() {
-		var $text = $('.code__css')[0];
-		this._createTextRange($text);
+		var $elem = $('.code__css')[0];
+		this._selectTextInElement($elem);
 	},
 	// Select the HTML
 	_selectHTML: function() {
-		var $text = $('.code__html')[0];
-		this._createTextRange($text);
+		var $elem = $('.code__html')[0];
+		this._selectTextInElement($elem);
 	},
-	_createTextRange: function($text) {
+	_selectTextInElement: function($text) {
 	  var doc = document;
 		if (doc.body.createTextRange) { // ms
 				var range = doc.body.createTextRange();
