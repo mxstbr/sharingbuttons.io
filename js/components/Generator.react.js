@@ -17,7 +17,7 @@ var Generator = React.createClass({
 
 		var networkSelectionButtons = [];
 		var previewButtons = [];
-		var sizeOptions = [];
+		var sizeSelectionButtons = [];
 		var iconSelectionButtons = [];
 		var selectedSize;
 		var selectedIcon;
@@ -36,13 +36,14 @@ var Generator = React.createClass({
 			if (sizes[size] === true) {
 				var selectedSize = size;
 			}
-			sizeOptions.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} />)
+			sizeSelectionButtons.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} />)
 		}
-		var sizeOptionAmount = sizeOptions.length;
+		var sizeOptionAmount = sizeSelectionButtons.length;
 
-		// Social network selection and preview buttons
+		// Social network selection buttons
 		for (var network in networks) {
-			networkSelectionButtons.push(<NetworkSelectionButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
+			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].name} selected={networks[network].visible} selectOption={this._toggleNetwork} />)
+			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
 				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={selectedIcon} />)
 			}
@@ -65,7 +66,7 @@ var Generator = React.createClass({
 						</div>
 						<h3>Size</h3>
 						<div className={"generator__sizes generator__radio--" + sizeOptionAmount}>
-							{ sizeOptions }
+							{ sizeSelectionButtons }
 						</div>
 						<h3>Icon</h3>
 						<div className={"generator__icons generator__radio--" + iconOptionAmount}>
@@ -93,6 +94,10 @@ var Generator = React.createClass({
 	// Dispatches event to change icon type
 	_changeIcon: function(evt) {
 		AppActions.changeIcon(evt.target.textContent.toLowerCase());
+	},
+	// Dispatches event to change network selection
+	_toggleNetwork: function(evt) {
+		AppActions.toggleNetwork(evt.target.textContent.toLowerCase());
 	}
 });
 
