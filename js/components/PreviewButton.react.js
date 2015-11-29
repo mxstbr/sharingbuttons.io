@@ -23,17 +23,15 @@ var PreviewButton = React.createClass({
 
 		// Render preview button
 		return (
-			<div className="resp-sharing-button__wrapper">
-				<a className="resp-sharing-button__link"
-				   key={ name + "share-link" }
-				   href={ network.link }
-				   target="_blank">
-					<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
-						{ icon }
-						{ shareText }
-					</div>
-				</a>
-			</div>
+			<a className="resp-sharing-button__link"
+			   key={ name + "share-link" }
+			   href={ network.link }
+			   target="_blank">
+				<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
+					{ icon }
+					{ shareText }
+				</div>
+			</a>
 		);
 	},
 	_makeIcon: function(string) {
