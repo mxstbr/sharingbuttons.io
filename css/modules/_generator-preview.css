@@ -83,3 +83,8 @@
 .generator__preview .resp-sharing-button {
 	font-size: 0.25em;
 }
+
+.generator__preview .resp-sharing-button svg {
+	height: 1.2em;
+	width: 1.2em;
+}
