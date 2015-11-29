@@ -19,6 +19,8 @@
   right: 0;
   fill: $background;
   z-index: 10;
+  width: 60px;
+  height: 60px;
 }
 
 .github-corner__bg {
