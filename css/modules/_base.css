@@ -1,0 +1,56 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+body {
+	color: $text-color;
+	background-color: $background;
+}
+
+#app {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.app__wrapper {
+	width: 96%;
+	max-width: $mobile-breakpoint;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+.app__wrapper:after {
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+}
+
+em {
+	font-weight: 700;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.grid-50 {
+	width: 48%;
+	float: left;
+	margin: 0 2%;
+}
+
+.grid-50:nth-child(even) {
+	margin-left: 0;
+}
+
+.grid-50:nth-child(odd) {
+	margin-right: 0;
+}

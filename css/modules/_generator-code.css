@@ -1,0 +1,40 @@
+.generator__code {
+	width: 100%;
+	clear: both;
+}
+
+.generator__code-heading {
+	text-align: center;
+	margin-bottom: 1em!important;
+}
+
+.generator__code-wrapper {
+	display: block;
+	font-size: 1.4rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 20em;
+  width: 50%;
+  float: left;
+  overflow: auto;
+}
+
+.generator__code-wrapper:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.generator__code-field {
+	font-family: $monospace;
+	font-size: 1.2rem;
+	border-radius: 0 0 5px 5px;
+}
+
+.generator__code-stats {
+  padding: 1.5em;
+  margin: 0;
+  clear: both;
+  text-align: center;
+}

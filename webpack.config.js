@@ -28,6 +28,7 @@ module.exports = {
   },
   postcss: function() {
     return [
+      require('postcss-nested')(),
       require('postcss-import')({ // Import all the css files...
         onImport: function (files) {
             files.forEach(this.addDependency); // ...and add dependecies from the main.css files to the other css files...

@@ -1,7 +1,9 @@
-var NetworkButton = require('./NetworkButton.react');
-var SocialButton = require('./SocialButton.react');
+var NetworkSelectionButton = require('./NetworkSelectionButton.react');
+var PreviewButton = require('./PreviewButton.react');
 var Code = require('./Code.react');
 var AppActions = require('../actions/AppActions');
+var GeneratorPreview = require('./GeneratorPreview.react');
+var SelectionButton = require('./SelectionButton.react');
 
 var Generator = React.createClass({
 	render: function() {
@@ -13,79 +15,66 @@ var Generator = React.createClass({
 		var icons = data.icons;
 		var style = data.style;
 
-		var networkButtons = [];
-		var socialButtons = [];
+		var networkSelectionButtons = [];
+		var previewButtons = [];
 		var sizeOptions = [];
-		var iconOptions = [];
-		var size;
+		var iconSelectionButtons = [];
+		var selectedSize;
 		var selectedIcon;
 
 		// Icon size selection
 		for (var icon in icons) {
-			iconOptions.push(<option key={ "icon-option--" + icon } value={icon}>{icon}</option>);
 			if (icons[icon] === true) {
 				selectedIcon = icon;
 			}
+			iconSelectionButtons.push(<SelectionButton key={"select-icon-" + icon} element={icon} selected={icons[icon]} selectOption={this._changeIcon} />);
 		}
+		var iconOptionAmount = iconSelectionButtons.length;
 
 		// Button size selection
-		for (var option in sizes) {
-			sizeOptions.push(<option key={ "size-option--" + option } value={option}>{option}</option>);
-			if (sizes[option] === true) {
-				size = option;
+		for (var size in sizes) {
+			if (sizes[size] === true) {
+				var selectedSize = size;
 			}
+			sizeOptions.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} />)
 		}
+		var sizeOptionAmount = sizeOptions.length;
 
 		// Social network selection and preview buttons
 		for (var network in networks) {
-			networkButtons.push(<NetworkButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
+			networkSelectionButtons.push(<NetworkSelectionButton key={ network + "-button" } network={network} name={networks[network].name} checked={networks[network].visible} />)
 			if (networks[network].visible === true) {
-				socialButtons.push(<SocialButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ size } icon={selectedIcon} />)
+				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={selectedIcon} />)
 			}
 		}
 
 		// Render the Generator
 		return (
 			<div className="generator">
-				<h2 style={ { display: "none" } }>Generator</h2>
-				<div className="generator__options">
-					<form className="generator__form">
-						<label>
-							<h3>URL</h3>
-							<input name="url" type="url" className="generator__url" placeholder="http://sharingbuttons.io" onChange={this._setURL} />
+				<div className="generator__inner-wrapper">
+					<div className="generator__settings">
+						<label className="generator__label">URL
+							<input className={"generator__settings-field generator__settings-url"} onChange={this._setURL} value={url} />
 						</label>
-						<label >
-							<h3>Text</h3>
-							<textarea name="text" className="generator__text" placeholder="Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking." onChange={this._setText}/>
+						<label className="generator__label">Text
+							<input className={"generator__settings-field generator__settings-text"} onChange={this._setText} value={text} />
 						</label>
-					</form>
-					<h3>Social Networks</h3>
-					<div className="generator__networks">
-						{ networkButtons }
-					</div>
-					<div className="generator__sizes">
+						<div className="generator__networks">
+							<h3>Social Networks</h3>
+							{ networkSelectionButtons }
+						</div>
 						<h3>Size</h3>
-						<div className="select">
-							<select aria-label="Select size" value={size} onChange={this._changeSize} >
-								{ sizeOptions }
-							</select>
+						<div className={"generator__sizes generator__radio--" + sizeOptionAmount}>
+							{ sizeOptions }
 						</div>
-					</div>
-					<div className="generator__icons">
 						<h3>Icon</h3>
-						<div className="select">
-							<select aria-label="Select icon type" value={selectedIcon} onChange={this._changeIcon} >
-								{ iconOptions }
-							</select>
+						<div className={"generator__icons generator__radio--" + iconOptionAmount}>
+							{ iconSelectionButtons }
 						</div>
 					</div>
+					<GeneratorPreview previewButtons={previewButtons} />
 				</div>
-				<div className="generator__buttons">
-					<h3>Preview</h3>
-					{ socialButtons }
-				</div>
-				<hr />
-				<Code url={url} text={text} networks={networks} size={size} style={style} icon={selectedIcon} />
+				<Code url={url} text={text} networks={networks} size={selectedSize} style={style} icon={selectedIcon} />
 			</div>
 		);
 	},
@@ -99,11 +88,11 @@ var Generator = React.createClass({
 	},
 	// Dispatches event to change the button size
 	_changeSize: function(evt) {
-		AppActions.changeSize(evt.target.value.toLowerCase());
+		AppActions.changeSize(evt.target.textContent.toLowerCase());
 	},
 	// Dispatches event to change icon type
 	_changeIcon: function(evt) {
-		AppActions.changeIcon(evt.target.value.toLowerCase());
+		AppActions.changeIcon(evt.target.textContent.toLowerCase());
 	}
 });
 

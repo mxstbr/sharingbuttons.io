@@ -1,0 +1,110 @@
+/* SHARE BUTTONS START */
+.resp-sharing-button {
+	display: inline-block;
+  	border-radius: 5px;
+  	border-width: 1px;
+  	border-style: solid;
+	transition: background-color 125ms ease-out, border-color 125ms ease-out, opacity 250ms ease-out;
+	margin: 0.5em;
+  	padding: 0.5em 0.75em;
+  	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.resp-sharing-button a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+}
+
+.resp-sharing-button__icon {
+	display: inline-block;
+}
+
+.resp-sharing-button__icon svg {
+	fill: #FFF;
+	width: 1em;
+	height: 1em;
+}
+
+.resp-sharing-button__link {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.resp-sharing-button--twitter {
+	background-color: #55acee;
+	border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover {
+	background-color: darken(#55acee, 10);
+	border-color: darken(#55acee, 10);
+}
+
+.resp-sharing-button--pinterest {
+	background-color: #cc2127;
+	border-color: #cc2127;
+}
+
+.resp-sharing-button--pinterest:hover {
+	background-color: darken(#cc2127, 10);
+	border-color: darken(#cc2127, 10);
+}
+
+.resp-sharing-button--facebook {
+	background-color: #3b5998;
+	border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover {
+	background-color: darken(#3b5998, 10);
+	border-color: darken(#3b5998, 10);
+}
+
+.resp-sharing-button--tumblr {
+	background-color: #35465C;
+	border-color: #35465C;
+}
+
+.resp-sharing-button--tumblr:hover {
+	background-color: darken(#35465C, 10);
+	border-color: darken(#35465C, 10);
+}
+
+.resp-sharing-button--reddit {
+	background-color: #5f99cf;
+	border-color: #5f99cf;
+}
+
+.resp-sharing-button--reddit:hover {
+	background-color: darken(#5f99cf, 10);
+	border-color: darken(#5f99cf, 10);
+}
+
+.resp-sharing-button--google {
+	background-color: #dd4b39;
+	border-color: #dd4b39;
+}
+
+.resp-sharing-button--google:hover {
+	background-color: darken(#dd4b39, 10);
+	border-color: darken(#dd4b39, 10);
+}
+
+.resp-sharing-button--linkedin {
+	background-color: #0976b4;
+	border-color: #0976b4;
+}
+
+.resp-sharing-button--linkedin:hover {
+	background-color: darken(#0976b4, 10);
+	border-color: darken(#0976b4, 10);
+}
+
+.resp-sharing-button--large svg {
+	padding-right: 0.4em;
+}
+
+.resp-sharing-button__wrapper {
+	display: inline-block;
+}

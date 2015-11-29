@@ -1,6 +1,7 @@
 window.React = require('react');
 window.jQuery = window.$ = require('jquery');
 var App = require('./components/App.react');
+var css = require('./../css/app.css');
 
 // Check if the user is on mobile
 window.mobilecheck = mobilecheck();

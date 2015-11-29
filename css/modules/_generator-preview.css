@@ -1,0 +1,85 @@
+.generator__preview {
+	width: 50%;
+	background-color: $mid-grey;
+	position: relative;
+	justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.generator__preview-page {
+	background-color: #FFF;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 100);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-width: 300px;
+	width: 80%;
+}
+
+.generator__preview-fake-navbar {
+	float: left;
+	width: 100%;
+	height: 15px;
+	background-color: $mid-grey;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.generator__preview-fake-text {
+	height: 10px;
+	width: 85%;
+	margin: 10px 7.5%;
+	background-color: $mid-grey;
+	float: left;
+}
+
+.generator__preview-fake-text:nth-child(8n + 1) {
+	width: 50%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 2) {
+	width: 27.5%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 3) {
+	width: 27.5%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 4) {
+	width: 50%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 5) {
+	width: 40%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 6) {
+	width: 37.5%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 7) {
+	width: 10%;
+}
+
+.generator__preview-fake-text:nth-child(8n + 8) {
+	width: 67.5%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.generator__preview-button-wrapper {
+	margin-left: 5%;
+	clear: both;
+	padding-top: 0.5em;
+}
+
+.generator__preview .resp-sharing-button {
+	font-size: 0.25em;
+}

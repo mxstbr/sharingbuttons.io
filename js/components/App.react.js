@@ -1,6 +1,7 @@
 var AppStore = require('../stores/AppStore');
 var Generator = require('./Generator.react');
 var Footer = require('./Footer.react');
+var Header = require('./Header.react');
 
 var App = React.createClass({
 	// Get the data when the component is first created and save it to this.state
@@ -33,21 +34,9 @@ var App = React.createClass({
 				<a href="http://twitter.com/mxstbr">
 					<h1 className="logo">&lt;mxstbr/&gt;</h1>
 				</a>
-				<div className="header">
-					<h1 className="header__title">sharingbuttons.io</h1>
-					<h2 className="header__tagline">Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.</h2>
-				</div>
+				<Header />
 				<div className="app__wrapper">
 					<Generator data={this.state} />
-					<div className="grid-50">
-						<h2>Why?</h2>
-						<p>Default social media sharing scripts are big, often download multiple files and track users across the web. This generator outputs social media sharing buttons that do not use JavaScript, which means they are incredibly fast, only use a single HTTP request and they do not track the user. (Also, they look quite nice.)</p>
-					</div>
-					<div className="grid-50">
-						<h2>How?</h2>
-						<p>Simply enter the URL and text you want to share, the social networks you want to include and choose one of the sizes. Then you only have to copy and paste the code generated below into your <code>.html</code> file.</p>
-						<p>The buttons are sized using <code>em</code> units, so if they are too big on your site simply change the <code>font-size</code> property of the <code>.resp-sharing-button</code> class to a smaller percentage, e.g. 80%.</p>
-					</div>
 					<Footer />
 				</div>
 			</div>

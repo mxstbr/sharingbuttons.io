@@ -1,6 +1,6 @@
 var InlineSvg = require('react-inlinesvg');
 
-var SocialButton = React.createClass({
+var PreviewButton = React.createClass({
 	componentDidMount: function() {
 	},
 	render: function() {
@@ -48,4 +48,4 @@ var SocialButton = React.createClass({
 	}
 });
 
-module.exports = SocialButton;
+module.exports = PreviewButton;

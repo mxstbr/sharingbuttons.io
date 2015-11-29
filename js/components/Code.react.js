@@ -9,9 +9,10 @@ var Code = React.createClass({
 		var text = this.props.text;
 		var url = this.props.url;
 		var networks = this.props.networks;
-		var style = '<style>\n' + this.props.style;
+		var style = this.props.style;
 		var icon = this.props.icon;
 		var $html = $('.code__html');
+		var $css = $('.code__css');
 		var kilobytesNormally = 0; // See https://jonsuh.com/blog/social-share-links/, Google+, Facebook, Linkedin, Pinterest then Twitter
 		var savedRequests = 0;
 		var code = "";
@@ -45,49 +46,55 @@ var Code = React.createClass({
 			}
 		}
 
-		code += style;
-		code += "\n</style>";
-
 		// Calculate the saved kB
 		var savedKilobytes = parseFloat(kilobytesNormally - this._getByteCount(code) / 1000).toFixed(2);
 		$('#kilobytes-saved').text(savedKilobytes);
 		$('#requests-saved').text(savedRequests);
 		// Change the code block
 		$html.text(code);
+		$css.text(style);
 		// Highlight the code
 		hljs.highlightBlock($html[0]);
+		hljs.highlightBlock($css[0]);
 	},
 	render: function() {
 		// Render code block in Generator
 		return (
-			<div>
-				<h3 className="generator__code-heading">Code</h3>
-				<div className="generator__code">
-					<pre onClick={this._selectText}>
-						<code className="code__html" >
-						</code>
-					</pre>
-				</div>
-				<h3 className="generator__stats">You are saving ~<em><span id="kilobytes-saved"></span> Kilobytes</em> and <em><span id="requests-saved"></span> HTTP Requests</em>!</h3>
+			<div className="generator__code">
+				<pre className="generator__code-wrapper" onClick={this._selectHTML}>
+					<code className="generator__code-field code__html" >
+					</code>
+				</pre>
+				<pre className="generator__code-wrapper" onClick={this._selectCSS}>
+					<code className="generator__code-field code__css" >
+					</code>
+				</pre>
+				<h3 className="generator__code-stats">You are saving ~<em><span id="kilobytes-saved"></span> Kilobytes</em> and <em><span id="requests-saved"></span> HTTP Requests</em>!</h3>
 			</div>
 		);
 	},
-	// Select the code on click
-	_selectText: function(evt) {
-	    var doc = document;
-	    var text = $(this.getDOMNode()).find("code")[0];
-
-	    if (doc.body.createTextRange) { // ms
-	        var range = doc.body.createTextRange();
-	        range.moveToElementText(text);
-	        range.select();
-	    } else if (window.getSelection) { // moz, opera, webkit
-	        var selection = window.getSelection();
-	        var range = doc.createRange();
-	        range.selectNodeContents(text);
-	        selection.removeAllRanges();
-	        selection.addRange(range);
-	    }
+	_selectCSS: function() {
+		var $text = $('.code__css')[0];
+		this._createTextRange($text);
+	},
+	// Select the HTML
+	_selectHTML: function() {
+		var $text = $('.code__html')[0];
+		this._createTextRange($text);
+	},
+	_createTextRange: function($text) {
+	  var doc = document;
+		if (doc.body.createTextRange) { // ms
+				var range = doc.body.createTextRange();
+				range.moveToElementText($text);
+				range.select();
+		} else if (window.getSelection) { // moz, opera, webkit
+				var selection = window.getSelection();
+				var range = doc.createRange();
+				range.selectNodeContents($text);
+				selection.removeAllRanges();
+				selection.addRange(range);
+		}
 	},
 	// Gets the length of a string in bytes
 	_getByteCount: function(string) {

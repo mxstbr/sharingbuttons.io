@@ -1,0 +1,89 @@
+@import '_generator-preview.css';
+@import '_generator-code.css';
+
+.generator {
+	overflow: auto;
+	margin-bottom: 0;
+	padding: 0em;
+	border-radius: 3px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.generator__inner-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	border-bottom: 1px solid $light-grey;
+}
+
+.generator__settings {
+	width: 50%;
+	background-color: #FFF;
+	border-right: 1px solid $mid-grey;
+}
+
+.generator__label {
+	width: calc(100% - 2em);
+	float: left;
+	padding: 1em;
+	padding-bottom: 0.5em;
+}
+
+.generator__label + .generator__label {
+	padding-top: 0.5em;
+}
+
+.generator__settings-field {
+	margin-left: 1em;
+	padding: 0.25em;
+}
+
+.generator__settings-url {
+}
+
+.generator__settings-text {
+}
+
+.generator__networks {
+	padding-left: 0.5em;
+}
+
+.generator__radiobutton {
+}
+
+.generator__radiobutton--selected {
+}
+
+.generator__radiobutton:first-child {
+	border-left: none;
+
+}
+
+.generator__radio--2 .generator__radiobutton {
+	width: 50%;
+}
+
+.generator__radio--3 .generator__radiobutton {
+	width: 33.33333%;
+}
+
+.generator__icons {
+	margin-bottom: 4em;
+}
+
+.generator:after,
+.generator__settings:after,
+.generator__preview:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+hr {
+	width: 100%;
+	margin-bottom: 2em;
+	margin-top: 0;
+	color: $text-color;
+	clear: both;
+}

@@ -1,0 +1,29 @@
+.logo {
+  position: absolute;
+	top: 0;
+	left: 0;
+	padding: 2%;
+  margin: 0;
+  font-family: $serif;
+  font-size: 1.5em;
+  color: $light-grey;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.header {
+  height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__wrapper {
+  display: block;
+  text-align: center;
+}
+
+.header__title {
+  font-family: $sans-serif;
+}

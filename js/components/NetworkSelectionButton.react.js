@@ -1,6 +1,6 @@
 var AppActions = require('../actions/AppActions');
 
-var NetworkButton = React.createClass({
+var NetworkSelectionButton = React.createClass({
 	render: function() {
 		// Render social network checkbox
 		return (
@@ -20,4 +20,4 @@ var NetworkButton = React.createClass({
 	}
 });
 
-module.exports = NetworkButton;
+module.exports = NetworkSelectionButton;

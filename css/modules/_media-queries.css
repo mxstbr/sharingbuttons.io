@@ -1,0 +1,9 @@
+@media all and (max-width: $mobile-breakpoint) {
+	.grid-50 {
+		width: 100%;
+		clear: both;
+	}
+}
+
+@media all and (max-width: $mobile-breakpoint / 2) {
+}
