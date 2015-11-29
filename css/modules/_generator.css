@@ -27,6 +27,7 @@
 	position: relative;
 	padding-top: 1.75em;
 	border-bottom: 1px solid $light-grey;
+	padding-bottom: 1.625em;
 }
 
 .generator__settings-field-wrapper--hover:hover,
@@ -46,6 +47,7 @@
 .generator__settings-field  {
 	position: relative;
 	padding: 1.625em 16px;
+	padding-bottom: 0;
 	width: 100%;
 	color: $dark-grey;
 	border: none;
@@ -58,22 +60,48 @@
 	width: 100%;
 	padding: 16px;
 	padding-top: 20px;
+	margin: 0;
 	z-index: 1;
 	font-size: 0.8em;
 	color: $mid-grey;
 	font-weight: 400;
-}
-
-.generator__settings-url {
-}
-
-.generator__settings-text {
+	user-select: none;
 }
 
 .generator__radiobutton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em;
+	text-align: center;
+	user-select: none;
+	cursor: pointer;
+	border-radius: 3px;
+	float: left;
+	text-transform: uppercase;
+	letter-spacing: 0.025em;
+	font-size: 0.8em;
+	width: 30%;
+	margin-right: 1%;
+}
+
+.generator__radiobutton-network {
+	width: 2em;
+	height: 2em;
+	margin: 0;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.generator__radiobutton-network svg {
+	width: 1em;
+	height: 1em;
 }
 
 .generator__radiobutton--selected {
+	background-color: $mid-grey;
+	fill: #FFF;
+	color: #FFF;
 }
 
 .generator:after,
@@ -83,13 +111,5 @@
 	content: "";
 	display: block;
 	height: 0;
-	clear: both;
-}
-
-hr {
-	width: 100%;
-	margin-bottom: 2em;
-	margin-top: 0;
-	color: $text-color;
 	clear: both;
 }

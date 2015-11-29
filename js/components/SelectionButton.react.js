@@ -1,7 +1,10 @@
 var SelectionButton = React.createClass({
   render: function() {
     var element = this.props.element;
-    var className = "generator__radiobutton";
+    var className = "generator__radiobutton"
+    if (this.props.classNameSuffix !== undefined) {
+      className += " generator__radiobutton-" + this.props.classNameSuffix;
+    }
 
     if (this.props.selected === true) {
       className += " generator__radiobutton--selected";

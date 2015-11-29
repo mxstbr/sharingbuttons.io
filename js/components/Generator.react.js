@@ -26,7 +26,7 @@ var Generator = React.createClass({
 			if (icons[icon] === true) {
 				selectedIcon = icon;
 			}
-			iconSelectionButtons.push(<SelectionButton key={"select-icon-" + icon} element={icon} selected={icons[icon]} selectOption={this._changeIcon} />);
+			iconSelectionButtons.push(<SelectionButton key={"select-icon-" + icon} element={icon} selected={icons[icon]} selectOption={this._changeIcon} classNameSuffix={"shape"} />);
 		}
 		var iconOptionAmount = iconSelectionButtons.length;
 
@@ -35,13 +35,13 @@ var Generator = React.createClass({
 			if (sizes[size] === true) {
 				var selectedSize = size;
 			}
-			sizeSelectionButtons.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} />)
+			sizeSelectionButtons.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} classNameSuffix={"size"} />)
 		}
 		var sizeOptionAmount = sizeSelectionButtons.length;
 
 		// Social network selection buttons
 		for (var network in networks) {
-			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].icons[selectedIcon]} selected={networks[network].visible} selectOption={this._toggleNetwork} nameInState={network} />)
+			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].icons[selectedIcon]} selected={networks[network].visible} selectOption={this._toggleNetwork} nameInState={network} classNameSuffix={"network"} />)
 			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
 				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />)
