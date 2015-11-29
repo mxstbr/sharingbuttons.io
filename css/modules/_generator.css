@@ -98,7 +98,7 @@
 }
 
 .generator__radiobutton--selected {
-	background-color: $mid-grey;
+	background-color: $brand-color;
 	fill: #FFF;
 	color: #FFF;
 }

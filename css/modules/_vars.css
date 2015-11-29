@@ -10,5 +10,8 @@ $light-grey: #EBEBEB;
 $mid-grey: #999;
 $dark-grey: #666;
 $very-dark-grey: #333;
+$orange: #FD691F;
+
+$brand-color: $orange;
 
 $button-height: 2em;
