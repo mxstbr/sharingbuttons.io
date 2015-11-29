@@ -18,7 +18,7 @@ var Generator = React.createClass({
 		var sizeSelectionButtons = [];
 		var iconSelectionButtons = [];
 		var HTMLCodeForCurrentButtons = "";
-		var CSSCodeForCurrentButtons = data.generalStyling;
+		var CSSCodeForCurrentButtons = data.generalStyling + "\n\n";
 		var selectedSize;
 		var selectedIcon;
 
@@ -49,7 +49,7 @@ var Generator = React.createClass({
 				HTMLCodeForCurrentButtons += React.renderToStaticMarkup(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
 				HTMLCodeForCurrentButtons += "\n\n";
 				CSSCodeForCurrentButtons += networks[network].style;
-				CSSCodeForCurrentButtons += "\n";
+				CSSCodeForCurrentButtons += "\n\n";
 			}
 		}
 
