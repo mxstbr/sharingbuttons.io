@@ -17,6 +17,7 @@
   width: 50%;
   float: left;
   overflow: auto;
+	border-bottom: 1px solid $light-grey;
 }
 
 .generator__code-wrapper:after {
@@ -38,4 +39,5 @@
   margin: 0;
   clear: both;
   text-align: center;
+	font-weight: 400;
 }
