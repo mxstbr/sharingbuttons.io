@@ -10,20 +10,8 @@ var App = React.createClass({
 	},
 	componentDidMount: function() {
 		// Fade the website in
-		var elem = this.getDOMNode();
-		var spinnerWrapper = document.querySelector('.spinner-wrapper');
-		elem.style.opacity = 0;
+		this._fadeInApp();
 		this._initAnalytics();
-		setTimeout(function() {
-			elem.style.transition = "opacity 250ms";
-			elem.style.opacity = 1;
-			// And the loading spinner out
-			spinnerWrapper.style.transition = "opacity 250ms";
-			spinnerWrapper.style.opacity = 0;
-			setTimeout(function() {
-				spinnerWrapper.style.display = "none";
-			}, 250);
-		}, 0);
 		AppStore.addChangeListener(this._onChange);
 	},
 	componentWillUnmount: function() {
@@ -54,6 +42,21 @@ var App = React.createClass({
 	// If the data changes, get the new data and rerender if something changed
 	_onChange: function() {
 	    this.setState(AppStore.getData());
+	},
+	_fadeInApp: function() {
+		var elem = this.getDOMNode();
+		var spinnerWrapper = document.querySelector('.spinner-wrapper');
+		elem.style.opacity = 0;
+		setTimeout(function() {
+			elem.style.transition = "opacity 250ms";
+			elem.style.opacity = 1;
+			// And the loading spinner out
+			spinnerWrapper.style.transition = "opacity 250ms";
+			spinnerWrapper.style.opacity = 0;
+			setTimeout(function() {
+				spinnerWrapper.style.display = "none";
+			}, 250);
+		}, 0);
 	},
 	_initAnalytics: function() {
 		window.owa_baseUrl = 'http://analytics.mxstbr.com/';
