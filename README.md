@@ -8,7 +8,7 @@ Built using `React.js` and utilising the `Flux` application architecture.
 
 ## Getting up and running
 
-After cloning this repository, run `npm install` in the root directory to install the dependencies. As soon as all of them are installed, you can `npm start` in the root directory and open `localhost:3000` in your browser to see your local copy of the app.
+After cloning this repository, run `npm install` in the root directory to install the dependencies. As soon as all of them are installed, you can `npm start` in the root directory and open `0.0.0.0:3000` in your browser to see your local copy of the app.
 
 ## Structure
 
