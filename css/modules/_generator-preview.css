@@ -88,5 +88,5 @@
 .generator__preview .resp-sharing-button svg {
 	height: 1.2em;
 	width: 1.2em;
-	padding-top: 0.4em;
+	vertical-align: top;
 }
