@@ -2,8 +2,7 @@
 	.grid-50 {
 		width: 100%;
 		clear: both;
+		margin-left: 0;
+		margin-right: 0;
 	}
-}
-
-@media all and (max-width: $mobile-breakpoint / 2) {
 }

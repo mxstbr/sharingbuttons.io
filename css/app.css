@@ -7,7 +7,7 @@
 @import 'modules/_header.css';
 @import 'modules/_generator.css';
 @import 'modules/_share-buttons.css';
-@import 'modules/_media-queries.css';
 @import 'modules/_footer.css';
 
+@import 'modules/_media-queries.css';
 @import 'vendor/highlighting.css';

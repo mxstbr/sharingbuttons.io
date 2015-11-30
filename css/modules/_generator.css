@@ -31,6 +31,7 @@
 
 .generator__settings-field-wrapper--hover {
 	cursor: text;
+	padding-bottom: 0;
 }
 
 .generator__settings-field-wrapper--hover:hover,
@@ -53,11 +54,11 @@
 .generator__settings-field  {
 	position: relative;
 	padding: 1.625em 16px;
-	padding-bottom: 0;
 	width: 100%;
 	color: $dark-grey;
 	border: none;
 	outline: none;
+	user-select: none;
 }
 
 .generator__settings-section-heading {
