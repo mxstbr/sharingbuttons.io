@@ -123,6 +123,13 @@ var _data = {
 	}
 }
 
+var localStorageData = JSON.parse(localStorage.getItem('sharingbuttons-data'));
+if (localStorageData !== undefined && localStorageData !== null) {
+	_data = localStorageData;
+} else {
+	localStorage.setItem('sharingbuttons-data', JSON.stringify(_data));
+}
+
 var AppStore = assign({}, EventEmitter.prototype, {
 	// Returns the current data
 	getData: function() {
@@ -208,6 +215,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 		return true;
 	},
 	emitChange: function() {
+		localStorage.setItem('sharingbuttons-data', JSON.stringify(_data));
 		this.emit('change');
 	},
 	addChangeListener: function(callback) {
