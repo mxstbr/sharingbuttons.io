@@ -21,6 +21,8 @@ var Code = React.createClass({
 
 		// Calculate the saved kB
 		var savedKilobytes = parseFloat(kilobytesNormally - (this._getByteCount(HTMLCode) + this._getByteCount(CSSCode)) / 1000).toFixed(2);
+		savedKilobytes = this._keepNumberInPositive(savedKilobytes);
+		savedRequests = this._keepNumberInPositive(savedRequests);
 		$('#kilobytes-saved').text(savedKilobytes);
 		$('#requests-saved').text(savedRequests);
 		// Highlight the code
@@ -71,6 +73,10 @@ var Code = React.createClass({
 	// Gets the length of a string in bytes
 	_getByteCount: function(string) {
 	    return encodeURI(string).split(/%..|./).length - 1;
+	},
+	// Checks that number is positive
+	_keepNumberInPositive: function(num) {
+		return (num <= 0) ? 0 : num;
 	}
 });
 
