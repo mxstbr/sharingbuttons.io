@@ -72,7 +72,7 @@ module.exports = function(options) {
           loaders: cssLoaders // ...with PostCSS
         }, {
           test: /\.jpe?g$|\.gif$|\.png$/i,
-          loader: "url-loader?limit=10000"
+          loader: "file-loader?name=[path][name].[ext]"
         }
       ]
     },

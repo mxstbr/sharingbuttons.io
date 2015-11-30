@@ -1,6 +1,17 @@
-//
-// Spinner taken from SpinKit http://tobiasahlin.com/spinkit/
-//
+.loading__title {
+  margin-top: 20vh;
+  font-family: $sans-serif;
+  font-weight: 700;
+  color: $very-dark-grey;
+  text-align: center;
+}
+
+.loading__tagline {
+  font-weight: 400;
+  font-size: 1.3em;
+  color: $dark-grey;
+  text-align: center;
+}
 
 .spinner-wrapper {
   width: 100%;
@@ -31,7 +42,7 @@
   height: 100%;
   width: 6px;
   display: inline-block;
-  
+
   -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
   animation: stretchdelay 1.2s infinite ease-in-out;
 }
@@ -57,15 +68,15 @@
 }
 
 @-webkit-keyframes stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 
 @keyframes stretchdelay {
-  0%, 40%, 100% { 
+  0%, 40%, 100% {
     transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
-  }  20% { 
+  }  20% {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }

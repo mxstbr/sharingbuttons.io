@@ -1,6 +1,7 @@
 window.React = require('react');
 var App = require('./components/App.react');
 var css = require('./../css/app.css');
+require('../img/social_media.png');
 
 React.initializeTouchEvents(true);
 

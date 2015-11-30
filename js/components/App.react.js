@@ -11,8 +11,8 @@ var App = React.createClass({
 	componentDidMount: function() {
 		// Fade the website in
 		this._fadeInApp();
-		this._initAnalytics();
 		AppStore.addChangeListener(this._onChange);
+		this._initAnalytics();
 	},
 	componentWillUnmount: function() {
 		AppStore.removeChangeListener(this._onChange);
