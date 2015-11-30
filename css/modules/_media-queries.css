@@ -6,3 +6,16 @@
 		margin-right: 0;
 	}
 }
+
+@media all and (max-width: 700px) {
+	.generator__inner-wrapper {
+		flex-direction: column;
+	}
+	.generator__settings {
+		width: 100%;
+	}
+
+	.generator__preview {
+		width: 100%;
+	}
+}
