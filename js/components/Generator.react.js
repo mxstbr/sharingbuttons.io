@@ -45,7 +45,8 @@ var Generator = React.createClass({
 			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].icons[selectedIcon]} selected={networks[network].visible} selectOption={this._toggleNetwork} nameInState={network} classNameSuffix={"network"} />)
 			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
-				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />)
+				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
+				HTMLCodeForCurrentButtons += "<!-- Sharingbutton " + networks[network].name + " -->\n"
 				HTMLCodeForCurrentButtons += React.renderToStaticMarkup(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
 				HTMLCodeForCurrentButtons += "\n\n";
 				CSSCodeForCurrentButtons += networks[network].style;
