@@ -18,7 +18,8 @@ module.exports = function(options) {
       new webpack.optimize.UglifyJsPlugin({ // Optimize the JavaScript...
         compress: {
           warnings: false // ...but do not show warnings in the console (there is a lot of them)
-        }
+        },
+        wrap: false
       }),
       new HtmlWebpackPlugin({
         template: 'index.html', // Move the index.html file...
