@@ -124,7 +124,7 @@ var _data = {
 }
 
 var localStorageData = JSON.parse(localStorage.getItem('sharingbuttons-data'));
-if (localStorageData !== undefined && localStorageData !== null) {
+if (localStorageData !== undefined && localStorageData !== null && localStorageData.networks.length === _data.networks.length) {
 	_data = localStorageData;
 } else {
 	localStorage.setItem('sharingbuttons-data', JSON.stringify(_data));
