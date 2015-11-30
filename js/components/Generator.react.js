@@ -58,6 +58,7 @@ var Generator = React.createClass({
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<div class="resp-sharing-button /g, '\n  <div class="resp-sharing-button ');
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<div class="resp-sharing-button__/g, '\n    <div class="resp-sharing-button__');
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<\/div><\/div>/g, "\n    </div>\n  </div>");
+		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<\/div>Share on/g, "\n    </div>Share on");
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<\/a>/g, "\n</a>");
 
 		// Render the Generator
