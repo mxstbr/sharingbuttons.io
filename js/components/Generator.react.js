@@ -54,7 +54,7 @@ var Generator = React.createClass({
 			}
 		}
 
-		// Add proper identation for HTML Code Preview
+		// Add proper indentation for HTML Code Preview
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<div class="resp-sharing-button /g, '\n  <div class="resp-sharing-button ');
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<div class="resp-sharing-button__/g, '\n    <div class="resp-sharing-button__');
 		HTMLCodeForCurrentButtons = HTMLCodeForCurrentButtons.replace(/<\/div><\/div>/g, "\n    </div>\n  </div>");
