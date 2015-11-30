@@ -10,16 +10,17 @@ var App = React.createClass({
 	},
 	componentDidMount: function() {
 		// Fade the website in
-		var $elem = $(this.getDOMNode());
-		$elem.css("opacity", "0");
+		var elem = this.getDOMNode();
+		var spinnerWrapper = document.querySelector('.spinner-wrapper');
+		elem.style.opacity = 0;
 		setTimeout(function() {
-			$elem.css("transition", "opacity 250ms");
-			$elem.css("opacity", "1");
+			elem.style.transition = "opacity 250ms";
+			elem.style.opacity = 1;
 			// And the loading spinner out
-			$('.spinner-wrapper').css("transition", "opacity 250ms");
-			$('.spinner-wrapper').css("opacity", "0");
+			spinnerWrapper.style.transition = "opacity 250ms";
+			spinnerWrapper.style.opacity = 0;
 			setTimeout(function() {
-				$('.spinner-wrapper').css("display", "none");
+				spinnerWrapper.style.display = "none";
 			}, 250);
 		}, 0);
 		AppStore.addChangeListener(this._onChange);

@@ -1,33 +1,30 @@
 var Code = React.createClass({
 	componentDidMount: function() {
+		this.html = document.querySelector('.code__html');
+		this.css = document.querySelector('.code__css');
+		this.kilobytesSavedElem = document.getElementById('kilobytes-saved');
+		this.requestsSavedElem = document.getElementById('requests-saved');
 		this.componentDidUpdate();
 	},
 	componentDidUpdate: function() {
-		var $html = $('.code__html');
-		var $css = $('.code__css');
 		var kilobytesNormally = 0; // See https://jonsuh.com/blog/social-share-links/, Google+, Facebook, Linkedin, Pinterest then Twitter
 		var savedRequests = 0;
-		var HTMLCode = this.props.HTMLForButtons;
-		var CSSCode = this.props.CSSForButtons;
-		var networks = this.props.networks;
-
 		// Piece together the code to be copied and calculate the savings
-		for (var network in networks) {
-			if (networks[network].visible === true) {
-				kilobytesNormally += networks[network].scriptSize;
-				savedRequests += networks[network].requests;
+		for (var network in this.props.networks) {
+			if (this.props.networks[network].visible === true) {
+				kilobytesNormally += this.props.networks[network].scriptSize;
+				savedRequests += this.props.networks[network].requests;
 			}
 		}
-
 		// Calculate the saved kB
-		var savedKilobytes = parseFloat(kilobytesNormally - (this._getByteCount(HTMLCode) + this._getByteCount(CSSCode)) / 1000).toFixed(2);
+		var savedKilobytes = parseFloat(kilobytesNormally - (this._getByteCount(this.props.HTMLForButtons) + this._getByteCount(this.props.CSSForButtons)) / 1000).toFixed(2);
 		savedKilobytes = this._keepNumberInPositive(savedKilobytes);
 		savedRequests = this._keepNumberInPositive(savedRequests);
-		$('#kilobytes-saved').text(savedKilobytes);
-		$('#requests-saved').text(savedRequests);
+		this.kilobytesSavedElem.textContent = savedKilobytes;
+		this.requestsSavedElem.textContent = savedRequests;
 		// Highlight the code
-		hljs.highlightBlock($html[0]);
-		hljs.highlightBlock($css[0]);
+		hljs.highlightBlock(this.html);
+		hljs.highlightBlock(this.css);
 	},
 	render: function() {
 		// Render code block in Generator
@@ -48,24 +45,24 @@ var Code = React.createClass({
 		);
 	},
 	_selectCSS: function() {
-		var $elem = $('.code__css')[0];
-		this._selectTextInElement($elem);
+		var elem = document.querySelector('.code__css');
+		this._selectTextInElement(elem);
 	},
 	// Select the HTML
 	_selectHTML: function() {
-		var $elem = $('.code__html')[0];
-		this._selectTextInElement($elem);
+		var elem = document.querySelector('.code__html');
+		this._selectTextInElement(elem);
 	},
-	_selectTextInElement: function($text) {
+	_selectTextInElement: function(text) {
 	  var doc = document;
 		if (doc.body.createTextRange) { // ms
 				var range = doc.body.createTextRange();
-				range.moveToElementText($text);
+				range.moveToElementText(text);
 				range.select();
 		} else if (window.getSelection) { // moz, opera, webkit
 				var selection = window.getSelection();
 				var range = doc.createRange();
-				range.selectNodeContents($text);
+				range.selectNodeContents(text);
 				selection.removeAllRanges();
 				selection.addRange(range);
 		}

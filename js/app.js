@@ -1,5 +1,4 @@
 window.React = require('react');
-window.jQuery = window.$ = require('jquery');
 var App = require('./components/App.react');
 var css = require('./../css/app.css');
 
