@@ -1,6 +1,5 @@
 .footer {
 	color: $very-dark-grey;
-	margin-bottom: 4em;
 }
 
 .footer a {
@@ -10,6 +9,10 @@
 
 .footer a:hover {
 	text-decoration: underline;
+}
+
+.grid-row {
+	margin-bottom: 2em;
 }
 
 .grid-row:after {
