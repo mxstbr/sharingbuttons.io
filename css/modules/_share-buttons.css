@@ -111,6 +111,16 @@
 	border-color: #2B2B2B;
 }
 
+.resp-sharing-button--xing {
+	background-color: #026466;
+	border-color: #026466;
+}
+
+.resp-sharing-button--xing:hover {
+	background-color: #013334;
+	border-color: #013334;
+}
+
 .resp-sharing-button--large svg {
 	padding-right: 0.4em;
 }
