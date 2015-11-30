@@ -1,3 +1,5 @@
+var prism = require('../vendor/prism');
+
 var Code = React.createClass({
 	componentDidMount: function() {
 		this.html = document.querySelector('.code__html');
@@ -22,21 +24,20 @@ var Code = React.createClass({
 		savedRequests = this._keepNumberInPositive(savedRequests);
 		this.kilobytesSavedElem.textContent = savedKilobytes;
 		this.requestsSavedElem.textContent = savedRequests;
-		// Highlight the code
-		hljs.highlightBlock(this.html);
-		hljs.highlightBlock(this.css);
+		prism.highlightElement(this.html);
+		prism.highlightElement(this.css);
 	},
 	render: function() {
 		// Render code block in Generator
 		return (
 			<div className="generator__code">
 				<pre className="generator__code-wrapper" onClick={this._selectHTML}>
-					<code className="generator__code-field code__html" >
+					<code className="generator__code-field code__html language-markup" >
 						{ this.props.HTMLForButtons }
 					</code>
 				</pre>
 				<pre className="generator__code-wrapper" onClick={this._selectCSS}>
-					<code className="generator__code-field code__css" >
+					<code className="generator__code-field code__css language-css" >
 						{ this.props.CSSForButtons }
 					</code>
 				</pre>
