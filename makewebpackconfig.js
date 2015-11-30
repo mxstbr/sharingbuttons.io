@@ -88,6 +88,12 @@ module.exports = function(options) {
         require('autoprefixer-core')({ // ...and add vendor prefixes...
           browsers: ['last 2 versions', 'IE > 8'] // ...supporting the last 2 major browser versions and IE 8 and up...
         }),
+        require('cssnano')({ // ...and minify the result.
+          autoprefixer: false, // Don't run autoprefixer since we've already done that...
+          comments: {
+            removeAll: true // ...and remove all comments, even those marked important.
+          }
+        }),
         require('postcss-reporter')({ // This plugin makes sure we get warnings in the console
           clearMessages: true
         })

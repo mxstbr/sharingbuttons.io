@@ -15,7 +15,7 @@
     "babel-eslint": "^4.0.5",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
-    "cssnano": "^2.1.1",
+    "cssnano": "2.6.1",
     "eslint": "^1.0.0",
     "eslint-config-airbnb": "0.0.7",
     "eslint-plugin-react": "^3.2.0",
