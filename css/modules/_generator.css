@@ -58,7 +58,6 @@
 	color: $dark-grey;
 	border: none;
 	outline: none;
-	user-select: none;
 }
 
 .generator__settings-section-heading {
