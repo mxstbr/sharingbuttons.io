@@ -1,4 +1,4 @@
-# `[sharingbuttons.io](http://sharingbuttons.io)``
+# [`sharingbuttons.io`](http://sharingbuttons.io)
 
 A web app to quickly generate social sharing buttons that do not track the user.
 
