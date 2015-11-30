@@ -16,6 +16,18 @@ body {
 	background-color: $background;
 }
 
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+p code {
+	font-size: 0.8em;
+	background-color: $light-grey;
+	padding: 0.1em 0.5em;
+	border-radius: 3px;
+}
+
 #app {
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -39,18 +51,4 @@ em {
 	font-weight: 700;
 	text-decoration: none;
 	font-style: normal;
-}
-
-.grid-50 {
-	width: 48%;
-	float: left;
-	margin: 0 2%;
-}
-
-.grid-50:nth-child(even) {
-	margin-left: 0;
-}
-
-.grid-50:nth-child(odd) {
-	margin-right: 0;
 }

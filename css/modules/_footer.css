@@ -1,6 +1,35 @@
-.footer:after {
+.footer {
+	color: $very-dark-grey;
+	margin-bottom: 4em;
+}
+
+.footer a {
+	color: $brand-color;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.grid-row:after {
 	content: "";
 	display: block;
-	clear: both;
 	height: 0;
+	clear: both;
+}
+
+.grid-50 {
+	width: 48%;
+	float: left;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.grid-50:nth-child(1) {
+	margin-left: 0;
+}
+
+.grid-50:nth-child(2) {
+	margin-right: 0;
 }
