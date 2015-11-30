@@ -11,6 +11,11 @@
   font-size: 1.5em;
   font-weight: 400;
   z-index: 10;
+  transition: color 50ms ease-out;
+}
+
+.logo:hover {
+  color: $dark-grey;
 }
 
 .github-corner {
@@ -25,10 +30,6 @@
 
 .github-corner__bg {
   fill: $mid-grey;
-}
-
-.octo-arm {
-  transform-origin: 130px 106px
 }
 
 .header {
@@ -46,8 +47,11 @@
 .header__title {
   font-family: $sans-serif;
   font-weight: 700;
+  color: $very-dark-grey;
 }
 
 .header__tagline {
   font-weight: 400;
+  font-size: 1.3em;
+  color: $dark-grey;
 }

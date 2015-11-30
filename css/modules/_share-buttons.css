@@ -101,6 +101,16 @@
 	border-color: #075683;
 }
 
+.resp-sharing-button--email {
+	background-color: #444444;
+	border-color: #444444;
+}
+
+.resp-sharing-button--email:hover {
+	background-color: #2B2B2B;
+	border-color: #2B2B2B;
+}
+
 .resp-sharing-button--large svg {
 	padding-right: 0.4em;
 }
