@@ -12,7 +12,7 @@ After cloning this repository, run `npm install` in the root directory to instal
 
 ## Structure
 
-The main part of the application is rendered in the `Generator` component found at `js/components/Generator.react.js`. All of the components can dispatch actions to change things.
+The main part of the application is rendered in the `App` component found at `js/components/App.react.js`. All of the components can dispatch actions to change things.
 
 ### Actions
 
