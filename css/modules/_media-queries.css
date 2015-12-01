@@ -20,6 +20,10 @@
 		padding: 1em;
 	}
 
+	.generator__radiobutton-bullet {
+		height: 2.55em;
+	}
+
 	.generator__radiobutton-network {
 		width: 3em;
 		height: 3em;
