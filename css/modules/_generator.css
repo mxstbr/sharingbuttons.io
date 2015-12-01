@@ -80,6 +80,24 @@
 	cursor: text;
 }
 
+.generator__radiobutton-bullet {
+	height: 1.75em;
+	width: 30%;
+	position: absolute;
+	background-color: $brand-color;
+	border-radius: 3px;
+	z-index: 0;
+	transition: transform 150ms ease-out
+}
+
+.generator__radiobutton--selected.generator__radiobutton:nth-child(2) ~ .generator__radiobutton-bullet {
+	transform: translateX(100%);
+}
+
+.generator__radiobutton--selected.generator__radiobutton:nth-child(3) ~ .generator__radiobutton-bullet {
+	transform: translateX(203%);
+}
+
 .generator__radiobutton {
 	display: flex;
 	align-items: center;
@@ -95,6 +113,9 @@
 	font-size: 0.8em;
 	width: 30%;
 	margin-right: 3%;
+	position: relative;
+	z-index: 1;
+	transition: color 150ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .generator__radiobutton-network {
@@ -111,9 +132,12 @@
 }
 
 .generator__radiobutton--selected {
-	background-color: $brand-color;
 	fill: #FFF;
 	color: #FFF;
+}
+
+.generator__radiobutton--selected.generator__radiobutton-network {
+	background-color: $brand-color;
 }
 
 .generator:after,

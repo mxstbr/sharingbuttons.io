@@ -84,12 +84,14 @@ var Generator = React.createClass({
 							<h3 className="generator__settings-section-heading">Size</h3>
 							<div className="generator__settings-field">
 								{ sizeSelectionButtons }
+								<div className="generator__radiobutton-bullet"></div>
 							</div>
 						</div>
 						<div className="generator__settings-field-wrapper">
 							<h3 className="generator__settings-section-heading">Icon</h3>
 							<div className="generator__settings-field">
 								{ iconSelectionButtons }
+								<div className="generator__radiobutton-bullet"></div>
 							</div>
 						</div>
 					</div>
