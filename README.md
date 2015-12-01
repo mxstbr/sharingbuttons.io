@@ -38,13 +38,17 @@ The app is split up across 6 components, all found in `js/components`. The follo
 
 * `App.react.js` - The root component that renders the rest of the application. Contains most of the static text found on the page.
 
-* `Generator.react.js` - The Generator. Renders the entire Generator, including the preview and the code block.
+* `Generator.react.js` - Renders the Generator.
 
-* `NetworkButton.react.js` - Renders the social network options.
+* `SelectionButton.react.js` - Renders the options of the Generator.
 
-* `SocialButton.react.js` - Renders the button preview.
+* `GeneratorCode.react.js` - Renders the code to be copied.
 
-* `Code.react.js` - Renders the code to be copied.
+* `GeneratorPreview.react.js` - Renders the preview page.
+
+* `Header.react.js` - Renders the header.
+
+* `PreviewButton.react.js` - Renders a preview button.
 
 * `Footer.react.js` - Renders the footer.
 
