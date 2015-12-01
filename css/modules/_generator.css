@@ -134,10 +134,12 @@
 .generator__radiobutton--selected {
 	fill: #FFF;
 	color: #FFF;
+	background-color: $brand-color;
+	transition: background-color 0ms ease-out 150ms;
 }
 
 .generator__radiobutton--selected.generator__radiobutton-network {
-	background-color: $brand-color;
+	transition: none;
 }
 
 .generator:after,
