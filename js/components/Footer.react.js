@@ -10,7 +10,7 @@ var Footer = React.createClass({
 					</div>
 					<div className="grid-50">
 						<p>Using these buttons is as easy as copying the HTML code into your <code>.html</code> files, and the CSS code into your <code>.css</code> file.</p>
-						<p>The buttons are sized using <code>em</code> units, so the only step to change the size of the buttons is to set the <code>font-size</code> property of the <code>.resp-sharing-button</code> class.</p>
+						<p>The buttons are sized using <code>em</code> units, so the only step to change the size of the buttons is to set the <code>font-size</code> property of the <code>.resp-sharing-button</code> class. Seriously, that's it!</p>
 					</div>
 				</div>
 				<div className="grid-row">
