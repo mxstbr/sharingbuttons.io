@@ -43,12 +43,12 @@ var AppActions = {
 		});
 	},
 	/**
-	 * Changes the icon type
-	 * @param  {string} type - THe type of icon used. Has to be "oval" or "normal"
+	 * Toggles the icon type
+	 * @param  {string} type - THe type of icon used. Has to be "circle" or "solid"
 	 */
-	changeIcon: function(type) {
+	toggleIcon: function(type) {
 		AppDispatcher.handleAction({
-			actionType: AppConstants.CHANGE_ICON,
+			actionType: AppConstants.TOGGLE_ICON,
 			type: type
 		});
 	}

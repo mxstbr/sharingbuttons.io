@@ -20,15 +20,27 @@ var Generator = React.createClass({
 		var HTMLCodeForCurrentButtons = "";
 		var CSSCodeForCurrentButtons = data.generalStyling + "\n\n";
 		var selectedSize;
-		var selectedIcon;
+		var selectedIcon = "";
 
 		// Icon size selection
 		for (var icon in icons) {
 			if (icons[icon] === true) {
-				selectedIcon = icon;
+				selectedIcon += icon;
 			}
-			iconSelectionButtons.push(<SelectionButton key={"select-icon-" + icon} element={icon} selected={icons[icon]} selectOption={this._changeIcon} classNameSuffix={"shape"} />);
+			iconSelectionButtons.push(
+				<SelectionButton
+					key={"select-icon-" + icon}
+					element={icon}
+					selected={icons[icon]}
+					selectOption={this._toggleIcon}
+					classNameSuffix={"shape"}
+					type="checkbox"
+				/>);
 		}
+		if (selectedIcon === "") {
+			selectedIcon = "normal"; // selectedIcon can be one of the following: "normal", "circle", "solid", "solidcircle"
+		}
+		console.log(selectedIcon);
 		var iconOptionAmount = iconSelectionButtons.length;
 
 		// Button size selection
@@ -36,18 +48,56 @@ var Generator = React.createClass({
 			if (sizes[size] === true) {
 				var selectedSize = size;
 			}
-			sizeSelectionButtons.push(<SelectionButton key={"select-size-" + size} element={size} selected={sizes[size]} selectOption={this._changeSize} classNameSuffix={"size"} />)
+			sizeSelectionButtons.push(
+				<SelectionButton
+					key={"select-size-" + size}
+					element={size}
+					selected={sizes[size]}
+					selectOption={this._changeSize}
+					classNameSuffix={"size"}
+					type="radio"
+				/>)
 		}
 		var sizeOptionAmount = sizeSelectionButtons.length;
 
 		// Social network selection buttons
 		for (var network in networks) {
-			networkSelectionButtons.push(<SelectionButton key={ network + "-button" } element={networks[network].icons[selectedIcon]} selected={networks[network].visible} selectOption={this._toggleNetwork} nameInState={network} classNameSuffix={"network"} />)
+			networkSelectionButtons.push(
+				<SelectionButton
+					key={network + "-button"}
+					element={networks[network].icons[selectedIcon]}
+					selected={networks[network].visible}
+					selectOption={this._toggleNetwork}
+					nameInState={network}
+					classNameSuffix={"network"}
+					iconSize={selectedIcon}
+					type="checkbox"
+				/>);
 			// If the network is selected, show it in the preview
 			if (networks[network].visible === true) {
-				previewButtons.push(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
+				previewButtons.push(
+					<PreviewButton
+						key={network + "-social-button"}
+						url={url}
+						text={text}
+						network={networks[network]}
+						id={network}
+						size={selectedSize}
+						icon={networks[network].icons[selectedIcon]}
+						iconSize={selectedIcon}
+					/>);
 				HTMLCodeForCurrentButtons += "<!-- Sharingbutton " + networks[network].name + " -->\n"
-				HTMLCodeForCurrentButtons += React.renderToStaticMarkup(<PreviewButton key={ network + "-social-button"} url={url} text={text} network={networks[network] } id={ network } size={ selectedSize } icon={networks[network].icons[selectedIcon]} />);
+				HTMLCodeForCurrentButtons += React.renderToStaticMarkup(
+					<PreviewButton
+						key={network + "-social-button"}
+						url={url}
+						text={text}
+						network={networks[network]}
+						id={network}
+						size={selectedSize}
+						icon={networks[network].icons[selectedIcon]}
+						iconSize={selectedIcon}
+					/>);
 				HTMLCodeForCurrentButtons += "\n\n";
 				CSSCodeForCurrentButtons += networks[network].style;
 				CSSCodeForCurrentButtons += "\n\n";
@@ -84,14 +134,13 @@ var Generator = React.createClass({
 							<h3 className="generator__settings-section-heading">Size</h3>
 							<div className="generator__settings-field">
 								{ sizeSelectionButtons }
-								<div className="generator__radiobutton-bullet"></div>
+				        <div className="generator__option-bullet"></div>
 							</div>
 						</div>
 						<div className="generator__settings-field-wrapper">
 							<h3 className="generator__settings-section-heading">Icon</h3>
 							<div className="generator__settings-field">
 								{ iconSelectionButtons }
-								<div className="generator__radiobutton-bullet"></div>
 							</div>
 						</div>
 					</div>
@@ -114,8 +163,8 @@ var Generator = React.createClass({
 		AppActions.changeSize(name);
 	},
 	// Dispatches event to change icon type
-	_changeIcon: function(name) {
-		AppActions.changeIcon(name);
+	_toggleIcon: function(name) {
+		AppActions.toggleIcon(name);
 	},
 	// Dispatches event to change network selection
 	_toggleNetwork: function(name) {

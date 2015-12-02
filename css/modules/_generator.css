@@ -80,7 +80,7 @@
 	cursor: text;
 }
 
-.generator__radiobutton-bullet {
+.generator__option-bullet {
 	height: 1.75em;
 	width: 30%;
 	position: absolute;
@@ -90,15 +90,15 @@
 	transition: transform 150ms ease-out
 }
 
-.generator__radiobutton--selected.generator__radiobutton:nth-child(2) ~ .generator__radiobutton-bullet {
+.generator__option--selected.generator__option:nth-child(2) ~ .generator__option-bullet {
 	transform: translateX(100%);
 }
 
-.generator__radiobutton--selected.generator__radiobutton:nth-child(3) ~ .generator__radiobutton-bullet {
+.generator__option--selected.generator__option:nth-child(3) ~ .generator__option-bullet {
 	transform: translateX(203%);
 }
 
-.generator__radiobutton {
+.generator__option {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -118,7 +118,7 @@
 	transition: color 150ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.generator__radiobutton-network {
+.generator__option-network {
 	width: 2em;
 	height: 2em;
 	margin: 0;
@@ -126,20 +126,34 @@
 	margin-bottom: 1em;
 }
 
-.generator__radiobutton-network svg {
+.generator__option-network svg {
 	width: 1em;
 	height: 1em;
+  overflow: visible;
 }
 
-.generator__radiobutton--selected {
-	fill: #FFF;
+.generator__option--selected {
 	color: #FFF;
 	background-color: $brand-color;
+}
+
+.generator__option--radio.generator__option--selected {
 	transition: background-color 0ms ease-out 150ms;
 }
 
-.generator__radiobutton--selected.generator__radiobutton-network {
+.generator__option--selected.generator__option-network {
 	transition: none;
+}
+
+.generator__option {
+	stroke: currentColor;
+	fill: none;
+}
+
+.generator__option-icon--solid,
+.generator__option-icon--solidcircle {
+	fill: currentColor;
+	stroke: none;
 }
 
 .generator:after,

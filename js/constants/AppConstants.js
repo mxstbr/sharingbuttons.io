@@ -6,5 +6,5 @@ module.exports = keyMirror({
     SET_URL: null,
     SET_TEXT: null,
     CHANGE_SIZE: null,
-    CHANGE_ICON: null
+    TOGGLE_ICON: null
 });

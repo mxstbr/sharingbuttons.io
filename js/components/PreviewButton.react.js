@@ -12,10 +12,10 @@ var PreviewButton = React.createClass({
 		switch(this.props.size) {
 			case "small":
 				shareText = "";
-				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className="resp-sharing-button__icon" dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
+				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
 				break;
 			case "large":
-				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className="resp-sharing-button__icon" dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
+				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
 			case "medium":
 				shareText = "Share on " + name;
 				break;

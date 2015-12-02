@@ -21,9 +21,21 @@
 }
 
 .resp-sharing-button__icon svg {
-	fill: #FFF;
 	width: 1em;
 	height: 1em;
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+	stroke: #FFF;
+	fill: none;
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+	fill: #FFF;
+	stroke: none;
 }
 
 .resp-sharing-button__link {
