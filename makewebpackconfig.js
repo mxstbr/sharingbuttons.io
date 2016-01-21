@@ -36,9 +36,7 @@ module.exports = function(options) {
           minifyURLs: true
         }
       }),
-      new AppCachePlugin({
-        cache: ['index.html', 'js/bundle.js', 'serviceworker.js']
-      })
+      new AppCachePlugin()
     ];
 
   // If app is in development
