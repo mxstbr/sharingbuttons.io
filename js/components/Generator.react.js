@@ -40,7 +40,6 @@ var Generator = React.createClass({
 		if (selectedIcon === "") {
 			selectedIcon = "normal"; // selectedIcon can be one of the following: "normal", "circle", "solid", "solidcircle"
 		}
-		console.log(selectedIcon);
 		var iconOptionAmount = iconSelectionButtons.length;
 
 		// Button size selection
