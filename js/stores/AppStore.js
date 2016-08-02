@@ -211,7 +211,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'twitter': 'https://twitter.com/intent/tweet/?text=' + text + '&url=' + url,
 			'google': 'https://plus.google.com/share?url=' + url,
 			'tumblr': "https://www.tumblr.com/widgets/share/tool?posttype=link&title=" + text + "&caption=" + text + "&content=" + url + "&canonicalUrl=" + url + "&shareSource=tumblr_share_button",
-			'pinterest': 'https://pinterest.com/pin/create/button/?url=' + url + '&summary=' + text,
+			'pinterest': 'https://pinterest.com/pin/create/button/?url=' + url + '&media=' + url + '&summary=' + text,
 			'linkedin': 'https://www.linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + text + '&summary=' + text + '&source=' + url,
 			'reddit': 'https://reddit.com/submit/?url=' + url,
 			'email': 'mailto:?subject=' + text + '&body=' + url,
