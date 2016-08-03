@@ -5,7 +5,6 @@
   border-width: 1px;
   border-style: solid;
 	transition: background-color 25ms ease-out, border-color 25ms ease-out, opacity 250ms ease-out;
-	margin: 0.5em;
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
@@ -41,6 +40,15 @@
 .resp-sharing-button__link {
 	text-decoration: none;
 	color: #FFF;
+	display: inline-block;
+	margin: 0.5em;
+}
+
+.resp-sharing-button__link:hover,
+.resp-sharing-button__link:active,
+.resp-sharing-button__link:focus {
+  color: #FFF;
+  text-decoration: none;
 }
 
 .resp-sharing-button--twitter {
