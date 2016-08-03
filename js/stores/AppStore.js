@@ -84,7 +84,8 @@ var _data = {
 			},
 			'style': '.resp-sharing-button--email {\n  background-color: #444444;\n  border-color: #444444;\n}\n\n.resp-sharing-button--email:hover\n.resp-sharing-button--email:active {\n  background-color: #2B2B2B;\n  border-color: #2B2B2B;\n}',
 			'scriptSize': 0,
-			'requests': 0
+			'requests': 0,
+			'openInThisWindow': true
 		},
 		'pinterest': {
 			'visible': true,
