@@ -14,7 +14,7 @@ var Footer = React.createClass({
 					</div>
 				</div>
 				<div className="grid-row">
-					<p>Contribute to this project on <a href="https://github.com/mxstbr/sharing">Github</a>. Icons by <a href="http://streamlineicons.com/">Streamline</a>.</p>
+					<p>Contribute to this project on <a href="https://github.com/mxstbr/sharing">GitHub</a>. Icons by <a href="http://streamlineicons.com/">Streamline</a>.</p>
 				</div>
 			</div>
 		);
