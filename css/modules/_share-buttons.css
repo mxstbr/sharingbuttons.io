@@ -151,7 +151,7 @@
 	border-color: #29a337;
 }
 
-.resp-sharing-button--large svg {
+.resp-sharing-button--large svg, .resp-sharing-button--medium svg {
 	padding-right: 0.4em;
 }
 
