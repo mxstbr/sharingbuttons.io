@@ -60,6 +60,15 @@
 	outline: none;
 }
 
+.generator__settings-size {
+	display: flex;
+	margin: 1.625em 1pc 0;
+	justify-content: space-between;
+	padding: 0;
+	box-sizing: border-box;
+	width: calc(100% - 2pc)
+}
+
 .generator__settings-section-heading {
 	position: absolute;
 	top: 0; left: 0;
@@ -87,15 +96,16 @@
 	background-color: $brand-color;
 	border-radius: 3px;
 	z-index: 0;
-	transition: transform 150ms ease-out
+	transition: transform 150ms ease-out;
+	left: 0;
 }
 
 .generator__option--selected.generator__option:nth-child(2) ~ .generator__option-bullet {
-	transform: translateX(100%);
+	transform: translateX(112%);
 }
 
 .generator__option--selected.generator__option:nth-child(3) ~ .generator__option-bullet {
-	transform: translateX(203%);
+	transform: translateX(223%);
 }
 
 .generator__option {
