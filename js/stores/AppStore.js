@@ -155,17 +155,6 @@ var _data = {
 	}
 }
 
-try {
-	var localStorageData = JSON.parse(localStorage.getItem('sharingbuttons-data'));
-	if (localStorageData !== undefined && localStorageData !== null && localStorageData.networks.length === _data.networks.length) {
-		_data = localStorageData;
-	} else {
-		localStorage.setItem('sharingbuttons-data', JSON.stringify(_data));
-	}
-} catch (e) {
-	// localStorage is not accessible - continue execution
-}
-
 var AppStore = assign({}, EventEmitter.prototype, {
 	// Returns the current data
 	getData: function() {
@@ -244,11 +233,6 @@ var AppStore = assign({}, EventEmitter.prototype, {
 		return true;
 	},
 	emitChange: function() {
-		try {
-			localStorage.setItem('sharingbuttons-data', JSON.stringify(_data));
-		} catch (e) {
-			// localStorage is not accessible - continue execution
-		}
 		this.emit('change');
 	},
 	addChangeListener: function(callback) {
