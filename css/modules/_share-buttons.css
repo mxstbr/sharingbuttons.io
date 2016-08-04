@@ -141,6 +141,16 @@
 	border-color: #013334;
 }
 
+.resp-sharing-button--whatsapp {
+	background-color: #43d854;
+	border-color: #43d854;
+}
+
+.resp-sharing-button--whatsapp:hover {
+	background-color: #29a337;
+	border-color: #29a337;
+}
+
 .resp-sharing-button--large svg {
 	padding-right: 0.4em;
 }
