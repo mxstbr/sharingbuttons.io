@@ -6,7 +6,7 @@ var Footer = React.createClass({
 				<div className="grid-row">
 					<div className="grid-50">
 						<p>Love or loathe them, sharing buttons will not go away for a while. The default social media sharing scripts provided by the networks themselves are big, often download multiple files and track users across the web.</p>
-						<p>This generator outputs social media sharing buttons that <em>do not use JavaScript</em>, which means they <em>load incredibly fast</em> (they only use a single HTTP request), <em>don't block your website from rendering</em>, are <em>accessible</em> and <em>don't track the user</em>. (Also, they look nice)</p>
+						<p>This generator outputs social media sharing buttons that <em>do not use JavaScript</em>, which means they <em>load incredibly fast</em> (they only use a single HTTP request), <em>don't block your website from rendering</em>, are <em>accessible</em> and <em>don't track the user</em>. (Also, they look nice and follow the brand guidelines where applicable!)</p>
 					</div>
 					<div className="grid-50">
 						<p>Using these buttons is as easy as copying the HTML code into your <code>.html</code> files, and the CSS code into your <code>.css</code> file.</p>
