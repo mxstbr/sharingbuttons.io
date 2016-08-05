@@ -135,7 +135,7 @@ var _data = {
 				'circle': '\n    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">\n        <g stroke-width="2px" stroke-linejoin="round" stroke-miterlimit="10">\n            <circle stroke-linecap="round" cx="12" cy="12" r="11.5"/><path d="M8.406 8.5h-3.084l1.676 2.754-2.238 3.277h3.084l2.238-3.277zM18.432 5.5h-3.272l-4.858 8.511 3.131 5.489h3.27l-3.131-5.489z"/>\n        </g>\n    </svg>',
 				'solidcircle': '\n    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">\n        <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M7.844,14.531H4.76l2.238-3.276L5.322,8.5h3.084 l1.676,2.754L7.844,14.531z M16.703,19.5h-3.271l-3.131-5.489L15.16,5.5h3.271l-4.859,8.511L16.703,19.5z"/>\n    </svg>'
 			},
-			'style': '.resp-sharing-button--xing {\n  background-color: #026466;\n  border-color: #026466;\n}\n\n.resp-sharing-button--xing:hover\n.resp-sharing-button--xing:active {\n  background-color: #013334;\n  border-color: #013334;\n}',
+			'style': '.resp-sharing-button--xing {\n  background-color: #1a7576;\n  border-color: #1a7576;\n}\n\n.resp-sharing-button--xing:hover\n.resp-sharing-button--xing:active {\n  background-color: #1e8687;\n  border-color: #1e8687;\n}',
 			'scriptSize': 4.6,
 			'requests': 3
 		},
