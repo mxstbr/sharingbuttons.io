@@ -122,13 +122,13 @@
 }
 
 .resp-sharing-button--email {
-	background-color: #444444;
-	border-color: #444444;
+	background-color: #777;
+	border-color: #777;
 }
 
 .resp-sharing-button--email:hover {
-	background-color: #2B2B2B;
-	border-color: #2B2B2B;
+	background-color: #444;
+	border-color: #444;
 }
 
 .resp-sharing-button--xing {
