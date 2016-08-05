@@ -102,14 +102,14 @@ var _data = {
 		},
 		'linkedin': {
 			'visible': false,
-			'name': 'Linkedin',
+			'name': 'LinkedIn',
 			'icons': {
 				'normal': '\n      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">\n        <path stroke-width="2px" stroke-linejoin="round" stroke-miterlimit="10" d="M6.5 21.5h-5v-13h5v13zm-2.51-15h-.029c-1.511 0-2.488-1.182-2.488-2.481 0-1.329 1.008-2.412 2.547-2.412 1.541 0 2.488 1.118 2.519 2.447-.001 1.3-.978 2.446-2.549 2.446zm11.51 6c-1.105 0-2 .896-2 2v7h-5s.059-12 0-13h5v1.485s1.548-1.443 3.938-1.443c2.962 0 5.062 2.144 5.062 6.304v6.654h-5v-7c0-1.104-.896-2-2-2z"/>\n    </svg>',
 				'solid': '\n    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">\n        <g>\n            <path d="M6.527,21.5h-5v-13h5V21.5z M4.018,6.5H3.988C2.478,6.5,1.5,5.318,1.5,4.019c0-1.329,1.008-2.412,2.547-2.412 c1.541,0,2.488,1.118,2.519,2.447C6.565,5.354,5.588,6.5,4.018,6.5z M15.527,12.5c-1.105,0-2,0.896-2,2v7h-5c0,0,0.059-12,0-13h5 v1.485c0,0,1.548-1.443,3.938-1.443c2.962,0,5.062,2.144,5.062,6.304V21.5h-5v-7C17.527,13.396,16.632,12.5,15.527,12.5z"/>\n        </g>\n    </svg>',
 				'circle': '\n    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">\n        <g stroke-width="2px" stroke-linejoin="round" stroke-miterlimit="10">\n            <circle stroke-linecap="round" cx="12" cy="12" r="11.5"/>\n            <path d="M15 12.5c-.276 0-.5.223-.5.5v3.5h-3s.031-6.478 0-7h3v.835s.457-.753 1.707-.753c1.55 0 2.293 1.12 2.293 3.296v3.622h-3v-3.5c0-.277-.225-.5-.5-.5zM7.5 9.5h2v7h-2z"/>\n            <circle cx="8.5" cy="6.5" r="1"/>\n        </g>\n    </svg>', // ALREADY CHANGED
 				'solidcircle': '\n    <svg version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">\n        <path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12s12-5.383,12-12S18.617,0,12,0z M9.5,16.5h-2v-7h2V16.5z M8.5,7.5 c-0.553,0-1-0.448-1-1c0-0.552,0.447-1,1-1s1,0.448,1,1C9.5,7.052,9.053,7.5,8.5,7.5z M18.5,16.5h-3V13c0-0.277-0.225-0.5-0.5-0.5 c-0.276,0-0.5,0.223-0.5,0.5v3.5h-3c0,0,0.031-6.478,0-7h3v0.835c0,0,0.457-0.753,1.707-0.753c1.55,0,2.293,1.12,2.293,3.296V16.5z" />\n    </svg>'
 			},
-			'style': '.resp-sharing-button--linkedin {\n  background-color: #0976b4;\n  border-color: #0976b4;\n}\n\n.resp-sharing-button--linkedin:hover,\n.resp-sharing-button--linkedin:active {\n  background-color: #075683;\n  border-color: #075683;\n}',
+			'style': '.resp-sharing-button--linkedin {\n  background-color: #0077b5;\n  border-color: #0077b5;\n}\n\n.resp-sharing-button--linkedin:hover,\n.resp-sharing-button--linkedin:active {\n  background-color: #046293;\n  border-color: #046293;\n}',
 			'scriptSize': 47.7,
 			'requests': 2
 		},
