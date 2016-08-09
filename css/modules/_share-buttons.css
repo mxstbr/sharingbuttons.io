@@ -118,3 +118,11 @@
 .resp-sharing-button--whatsapp:hover {
 	background-color: #1da851
 }
+
+.resp-sharing-button--pocket {
+	background-color: #F43B53
+}
+
+.resp-sharing-button--pocket:hover {
+	background-color: #BF3243
+}
