@@ -2,7 +2,7 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var AppActions = require('../actions/AppActions');
 var EventEmitter = require('events').EventEmitter;
 var AppConstants = require('../constants/AppConstants');
-var assign = require('react/lib/Object.assign');
+var assign = Object.assign || ((obj, props) => { for (let i in props) obj[i] = props[i]; return obj; });
 
 /**
  * DATA
