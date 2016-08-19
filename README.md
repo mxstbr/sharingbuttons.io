@@ -52,6 +52,10 @@ The app is split up across 6 components, all found in `js/components`. The follo
 
 * `Footer.react.js` - Renders the footer.
 
+## Contributing
+
+PRs are welcome. Check [the wiki's notes on contributing](https://github.com/mxstbr/sharingbuttons.io/wiki) for details
+
 ## Help
 
 If you need help with anything regarding this app, contact me on [twitter](https://twitter.com/mxstbr) and I will try to help you as quickly as possible.

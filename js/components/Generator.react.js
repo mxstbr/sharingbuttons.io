@@ -131,7 +131,7 @@ var Generator = React.createClass({
 						</div>
 						<div className="generator__settings-field-wrapper">
 							<h3 className="generator__settings-section-heading">Size</h3>
-							<div className="generator__settings-field">
+							<div className="generator__settings-field generator__settings-size">
 								{ sizeSelectionButtons }
 				        <div className="generator__option-bullet"></div>
 							</div>
