@@ -1,4 +1,4 @@
-# [`sharingbuttons.io`](http://sharingbuttons.io)
+# [`sharingbuttons.io`](http://sharingbuttons.io) <a href="http://thinkmill.com.au"><img height="20px" alt="Supported by Thinkmill" src="https://thinkmill.github.io/badge/heart@2x.png" /></a>
 
 A web app to quickly generate social sharing buttons that do not track the user.
 
