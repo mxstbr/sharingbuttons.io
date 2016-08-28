@@ -1,4 +1,4 @@
-# [`sharingbuttons.io`](http://sharingbuttons.io)
+# [`sharingbuttons.io`](http://sharingbuttons.io) <a href="http://thinkmill.com.au"><img alt="Supported by Thinkmill" src="https://thinkmill.github.io/badge/heart.svg" /></a>
 
 A web app to quickly generate social sharing buttons that do not track the user.
 
@@ -51,6 +51,10 @@ The app is split up across 6 components, all found in `js/components`. The follo
 * `PreviewButton.react.js` - Renders a preview button.
 
 * `Footer.react.js` - Renders the footer.
+
+## Contributing
+
+PRs are welcome. Check [the wiki's notes on contributing](https://github.com/mxstbr/sharingbuttons.io/wiki) for details
 
 ## Help
 

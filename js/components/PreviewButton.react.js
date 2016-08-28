@@ -5,20 +5,14 @@ var PreviewButton = React.createClass({
 		var text = this.props.text;
 		var url = this.props.url;
 		var id = this.props.id;
-		var icon = [];
-		var shareText;
+		var icon = <div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>;
+		var shareText = "";
 
 		// Change the button text based on size
-		switch(this.props.size) {
-			case "small":
-				shareText = "";
-				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
-				break;
-			case "large":
-				icon.push(<div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>);
-			case "medium":
-				shareText = "Share on " + name;
-				break;
+		if (this.props.size === "medium") {
+			shareText = name;
+		} else if (this.props.size === "large") {
+			shareText = "Share " + (this.props.network.name.toLowerCase() === "e-mail" ? "by " : "on ") + name;
 		}
 
 		// Render preview button
@@ -26,7 +20,7 @@ var PreviewButton = React.createClass({
 			<a className="resp-sharing-button__link"
 			   key={ name + "share-link" }
 			   href={ network.link }
-			   target="_blank"
+			   target={ network.openInThisWindow ? "_self" : "_blank" }
 				 aria-label={ shareText }>
 				<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
 					{ icon }
