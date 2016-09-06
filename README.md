@@ -54,7 +54,9 @@ The app is split up across 6 components, all found in `js/components`. The follo
 
 ## Contributing
 
-PRs are welcome. Check [the wiki's notes on contributing](https://github.com/mxstbr/sharingbuttons.io/wiki) for details
+sharingbuttons.io loves community involvement! Take a look at the [unassigned open issues](https://github.com/mxstbr/sharingbuttons.io/issues?q=is%3Aopen+is%3Aissue+no%3Aassignee), especially the [unassigned open requests for help](https://github.com/mxstbr/sharingbuttons.io/issues?q=is%3Aopen+is%3Aissue+no%3Aassignee+label%3A%22help+wanted%22), or open a new issue/make a PR!
+
+<!-- PRs are welcome. Check [the wiki's notes on contributing](https://github.com/mxstbr/sharingbuttons.io/wiki) for details -->
 
 ## Help
 
