@@ -7,7 +7,7 @@ var PreviewButton = React.createClass({
 		var id = this.props.id;
 		var icon = <div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>;
 		var shareText = "";
-		var qrcode = "";
+		var qrcode = undefined;
 
 		// Change the button text based on size
 		if (this.props.size === "medium") {
