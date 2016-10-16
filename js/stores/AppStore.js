@@ -163,7 +163,8 @@ var _data = {
 			},
 			'style':'.resp-sharing-button--whechat {\n  background-color: #37c700;\n  border-color: #37c700;\n}\n\n.resp-sharing-button--wechat:hover,\n.resp-sharing-button--wechat:active {\n  background-color: #30af00;\n  border-color: #30af00;\n}',
 			'scriptSize': 0,
-			'requests': 1
+			'requests': 0,
+			'qrcode': true
 		}
 	}
 }

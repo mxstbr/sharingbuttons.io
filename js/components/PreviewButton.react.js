@@ -7,12 +7,17 @@ var PreviewButton = React.createClass({
 		var id = this.props.id;
 		var icon = <div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>;
 		var shareText = "";
+		var qrcode = "";
 
 		// Change the button text based on size
 		if (this.props.size === "medium") {
 			shareText = name;
 		} else if (this.props.size === "large") {
 			shareText = "Share " + (this.props.network.name.toLowerCase() === "e-mail" ? "by " : "on ") + name;
+		}
+
+		if (network.qrcode) {
+			qrcode = <img src={ network.link } className={ "resp-sharing-button__qrcode" }/>;
 		}
 
 		// Render preview button
@@ -25,6 +30,7 @@ var PreviewButton = React.createClass({
 				<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
 					{ icon }
 					{ shareText }
+					{ qrcode }
 				</div>
 			</a>
 		);

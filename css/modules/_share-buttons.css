@@ -39,6 +39,17 @@
 	stroke: none
 }
 
+/* Qrcode popover */
+.resp-sharing-button__qrcode {
+	display: none;
+	position:absolute;
+	top:-120px;
+	left:0
+}
+.resp-sharing-button:hover .resp-sharing-button__qrcode {
+	display: block
+}
+
 .resp-sharing-button--twitter {
 	background-color: #55acee
 }
@@ -120,7 +131,8 @@
 }
 
 .resp-sharing-button--wechat {
-	background-color: #37c700
+	background-color: #37c700;
+	position:relative
 }
 
 .resp-sharing-button--wechat:hover {
