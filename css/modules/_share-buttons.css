@@ -11,6 +11,7 @@
 }
 
 .resp-sharing-button {
+	cursor: pointer;
 	border-radius: 5px;
 	transition: 25ms ease-out;
 	padding: 0.5em 0.75em;
@@ -46,8 +47,13 @@
 	top:-120px;
 	left:0
 }
-.resp-sharing-button:hover .resp-sharing-button__qrcode {
+.resp-sharing-button__checkbox:checked ~ .resp-sharing-button__qrcode {
 	display: block
+}
+
+.resp-sharing-button__checkbox {
+	position: absolute;
+	left: -9999px
 }
 
 .resp-sharing-button--twitter {

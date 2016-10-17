@@ -8,6 +8,7 @@ var PreviewButton = React.createClass({
 		var icon = <div aria-hidden="true" key={"preview-button-" + name} className={"resp-sharing-button__icon resp-sharing-button__icon--" + this.props.iconSize} dangerouslySetInnerHTML={ this._makeIcon(this.props.icon) }></div>;
 		var shareText = "";
 		var qrcode = undefined;
+		var ShareButton = "a";
 
 		// Change the button text based on size
 		if (this.props.size === "medium") {
@@ -17,14 +18,21 @@ var PreviewButton = React.createClass({
 		}
 
 		if (network.qrcode) {
-			qrcode = <img src={ network.link } className={ "resp-sharing-button__qrcode" }/>;
+			ShareButton = "label";
+			qrcode = (
+				<div>
+					<input type="checkbox" className={ "resp-sharing-button__checkbox" } id={ name + "__checkbox" }/>
+					<img src={ network.link } className={ "resp-sharing-button__qrcode" }/>
+				</div>
+			);
 		}
 
 		// Render preview button
 		return (
-			<a className="resp-sharing-button__link"
+			<ShareButton className="resp-sharing-button__link"
 			   key={ name + "share-link" }
 			   href={ network.link }
+			   htmlFor={ name + "__checkbox"}
 			   target={ network.openInThisWindow ? "_self" : "_blank" }
 				 aria-label={ shareText }>
 				<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
@@ -32,7 +40,7 @@ var PreviewButton = React.createClass({
 					{ shareText }
 					{ qrcode }
 				</div>
-			</a>
+			</ShareButton>
 		);
 	},
 	_makeIcon: function(string) {
