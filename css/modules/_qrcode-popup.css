@@ -9,16 +9,16 @@
 	display: block
 }
 
+.qrcode-popup__checkbox {
+	position: absolute;
+	left: -9999px
+}
+
 .qrcode-popup__qrcode-wrapper {
 	padding: 10px;
 	background: #fff;
 	border: 2px solid #efefef;
 	border-radius: 5px
-}
-
-.qrcode-popup__checkbox {
-	position: absolute;
-	left: -9999px
 }
 
 .qrcode-popup__qrcode-wrapper:after, .qrcode-popup__qrcode-wrapper:before {
@@ -29,18 +29,18 @@
 	height: 0;
 	width: 0;
 	position: absolute;
-	pointer-events: none;
+	pointer-events: none
 }
 
 .qrcode-popup__qrcode-wrapper:after {
 	border-color: rgba(255, 255, 255, 0);
 	border-top-color: #ffffff;
 	border-width: 13px;
-	margin-left: -13px;
+	margin-left: -13px
 }
 .qrcode-popup__qrcode-wrapper:before {
 	border-color: rgba(239, 239, 239, 0);
 	border-top-color: #efefef;
 	border-width: 16px;
-	margin-left: -16px;
+	margin-left: -16px
 }
