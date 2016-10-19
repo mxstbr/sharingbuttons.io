@@ -1,0 +1,15 @@
+/* Qrcode popover */
+.qrcode-popup__qrcode {
+	display: none;
+	position:absolute;
+	top:-120px;
+	left:0
+}
+.qrcode-popup__checkbox:checked ~ .qrcode-popup__qrcode {
+	display: block
+}
+
+.qrcode-popup__checkbox {
+	position: absolute;
+	left: -9999px
+}

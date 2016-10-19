@@ -238,7 +238,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'email': 'mailto:?subject=' + text + '&body=' + url,
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
 			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
-			'wechat': 'https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=' + url,
+			'wechat': url,
 		}
 
 		for (var network in _data.networks) {

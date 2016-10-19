@@ -40,22 +40,6 @@
 	stroke: none
 }
 
-/* Qrcode popover */
-.resp-sharing-button__qrcode {
-	display: none;
-	position:absolute;
-	top:-120px;
-	left:0
-}
-.resp-sharing-button__checkbox:checked ~ .resp-sharing-button__qrcode {
-	display: block
-}
-
-.resp-sharing-button__checkbox {
-	position: absolute;
-	left: -9999px
-}
-
 .resp-sharing-button--twitter {
 	background-color: #55acee
 }
