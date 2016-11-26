@@ -11,6 +11,7 @@
 }
 
 .resp-sharing-button {
+	cursor: pointer;
 	border-radius: 5px;
 	transition: 25ms ease-out;
 	padding: 0.5em 0.75em;
@@ -117,4 +118,13 @@
 
 .resp-sharing-button--whatsapp:hover {
 	background-color: #1da851
+}
+
+.resp-sharing-button--wechat {
+	background-color: #37c700;
+	position:relative
+}
+
+.resp-sharing-button--wechat:hover {
+	background-color: #30af00
 }
