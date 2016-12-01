@@ -19,11 +19,14 @@
 
 .resp-sharing-button__icon svg {
 	width: 1em;
-	height: 1em
+	height: 1em;
+	margin-right: 0.4em;
+	vertical-align: top
 }
 
-.resp-sharing-button span {
-	padding-left: 0.4em
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
 }
 
 /* Non solid icons get a stroke */
