@@ -29,6 +29,7 @@
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
 	stroke: #fff;
+	stroke-width: 2px;
 	fill: none
 }
 
