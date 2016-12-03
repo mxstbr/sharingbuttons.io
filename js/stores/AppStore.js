@@ -14,7 +14,7 @@ var _data = {
 		"solid": true,
 		"circle": false
 	},
-	"generalStyling": ".resp-sharing-button__link,\n.resp-sharing-button__icon {\n  display: inline-block\n}\n\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #fff;\n  margin: 0.5em\n}\n\n.resp-sharing-button {\n  border-radius: 5px;\n  transition: 25ms ease-out;\n  padding: 0.5em 0.75em;\n  font-family: Helvetica Neue,Helvetica,Arial,sans-serif\n}\n\n.resp-sharing-button__icon svg {\n  width: 1em;\n  height: 1em;\n  margin-right: 0.4em;\n  vertical-align: top\n}\n\n.resp-sharing-button--small svg {\n  margin: 0;\n  vertical-align: middle\n}\n\n/* Non solid icons get a stroke */\n.resp-sharing-button__icon {\n  stroke: #fff;\n  fill: none\n}\n\n/* Solid icons get a fill */\n.resp-sharing-button__icon--solid,\n.resp-sharing-button__icon--solidcircle {\n  fill: #fff;\n  stroke: none\n}\n\n.resp-sharing-button--twitter {\n  background-color: #55acee\n}\n\n.resp-sharing-button--twitter:hover {\n  background-color: #2795e9\n}\n\n.resp-sharing-button--pinterest {\n  background-color: #bd081c\n}\n\n.resp-sharing-button--pinterest:hover {\n  background-color: #8c0615\n}\n\n.resp-sharing-button--facebook {\n  background-color: #3b5998\n}\n\n.resp-sharing-button--facebook:hover {\n  background-color: #2d4373\n}\n\n.resp-sharing-button--tumblr {\n  background-color: #35465C\n}\n\n.resp-sharing-button--tumblr:hover {\n  background-color: #222d3c\n}\n\n.resp-sharing-button--reddit {\n  background-color: #5f99cf\n}\n\n.resp-sharing-button--reddit:hover {\n  background-color: #3a80c1\n}\n\n.resp-sharing-button--google {\n  background-color: #dd4b39\n}\n\n.resp-sharing-button--google:hover {\n  background-color: #c23321\n}\n\n.resp-sharing-button--linkedin {\n  background-color: #0077b5\n}\n\n.resp-sharing-button--linkedin:hover {\n  background-color: #046293\n}\n\n.resp-sharing-button--email {\n  background-color: #777\n}\n\n.resp-sharing-button--email:hover {\n  background-color: #5e5e5e\n}\n\n.resp-sharing-button--xing {\n  background-color: #1a7576\n}\n\n.resp-sharing-button--xing:hover {\n  background-color: #114c4c\n}\n\n.resp-sharing-button--whatsapp {\n  background-color: #25D366\n}\n\n.resp-sharing-button--whatsapp:hover {\n  background-color: #1da851\n}",
+	"generalStyling": ".resp-sharing-button__link,\n.resp-sharing-button__icon {\n  display: inline-block\n}\n\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #fff;\n  margin: 0.5em\n}\n\n.resp-sharing-button {\n  border-radius: 5px;\n  transition: 25ms ease-out;\n  padding: 0.5em 0.75em;\n  font-family: Helvetica Neue,Helvetica,Arial,sans-serif\n}\n\n.resp-sharing-button__icon svg {\n  width: 1em;\n  height: 1em;\n  margin-right: 0.4em;\n  vertical-align: top\n}\n\n.resp-sharing-button--small svg {\n  margin: 0;\n  vertical-align: middle\n}\n\n/* Non solid icons get a stroke */\n.resp-sharing-button__icon {\n  stroke: #fff;\n  fill: none\n}\n\n/* Solid icons get a fill */\n.resp-sharing-button__icon--solid,\n.resp-sharing-button__icon--solidcircle {\n  fill: #fff;\n  stroke: none\n}\n\n.resp-sharing-button--twitter {\n  background-color: #55acee\n}\n\n.resp-sharing-button--twitter:hover {\n  background-color: #2795e9\n}\n\n.resp-sharing-button--pinterest {\n  background-color: #bd081c\n}\n\n.resp-sharing-button--pinterest:hover {\n  background-color: #8c0615\n}\n\n.resp-sharing-button--facebook {\n  background-color: #3b5998\n}\n\n.resp-sharing-button--facebook:hover {\n  background-color: #2d4373\n}\n\n.resp-sharing-button--tumblr {\n  background-color: #35465C\n}\n\n.resp-sharing-button--tumblr:hover {\n  background-color: #222d3c\n}\n\n.resp-sharing-button--reddit {\n  background-color: #5f99cf\n}\n\n.resp-sharing-button--reddit:hover {\n  background-color: #3a80c1\n}\n\n.resp-sharing-button--google {\n  background-color: #dd4b39\n}\n\n.resp-sharing-button--google:hover {\n  background-color: #c23321\n}\n\n.resp-sharing-button--linkedin {\n  background-color: #0077b5\n}\n\n.resp-sharing-button--linkedin:hover {\n  background-color: #046293\n}\n\n.resp-sharing-button--email {\n  background-color: #777\n}\n\n.resp-sharing-button--email:hover {\n  background-color: #5e5e5e\n}\n\n.resp-sharing-button--xing {\n  background-color: #1a7576\n}\n\n.resp-sharing-button--xing:hover {\n  background-color: #114c4c\n}\n\n.resp-sharing-button--whatsapp {\n  background-color: #25D366\n}\n\n.resp-sharing-button--whatsapp:hover {\n  background-color: #1da851\n}\n\n.resp-sharing-button--hackernews {\nbackground-color: #FF6600\n}\n.resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 } ",
 	"sizes": {
 		"small": false,
 		"medium": false,
@@ -152,6 +152,19 @@ var _data = {
 			'scriptSize': 15.1,
 			'requests': 1
 		},
+		'hackernews': {
+			'visible': false,
+			'name': 'Hacker News',
+			'icons': {
+				'normal': '\n			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid"><path fill="#FFF" d="M0 0h256v256H0z"/><path fill="#000" d="M119.374 144.746l-43.94-82.314h20.08l25.848 52.092c.398.928.862 1.89 1.392 2.883.53.994.994 2.022 1.39 3.082.267.393.465.76.598 1.09.133.33.265.63.398.893.662 1.326 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.253 2.22-4.672 3.48-7.256 1.26-2.585 2.552-5.27 3.877-8.053l26.246-52.09h18.69l-44.34 83.31v53.086h-16.9v-54.08z"/></svg>',
+				'solid': '\n			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid"><path fill="#FFF" d="M0 0h256v256H0z"/><path fill="#000" d="M119.374 144.746l-43.94-82.314h20.08l25.848 52.092c.398.928.862 1.89 1.392 2.883.53.994.994 2.022 1.39 3.082.267.393.465.76.598 1.09.133.33.265.63.398.893.662 1.326 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.253 2.22-4.672 3.48-7.256 1.26-2.585 2.552-5.27 3.877-8.053l26.246-52.09h18.69l-44.34 83.31v53.086h-16.9v-54.08z"/></svg>',
+				'circle': '\n    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11.5"/><path d="M8.4 8.5h-3L7 11.3l-2.2 3.2h3l2.3-3.2zm10-3h-3.2l-5 8.5 3.2 5.5h3.3l-3-5.5z"/></svg>',
+				'solidcircle': '\n    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill-rule="evenodd" d="M128 256c70.692 0 128-57.308 128-128C256 57.308 198.692 0 128 0 57.308 0 0 57.308 0 128c0 70.692 57.308 128 128 128zm-9.06-113.686L75 60h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L161.49 60h18.69l-44.34 83.308v53.087h-16.9v-54.08z"/></svg>'
+			},
+			'style': '.resp-sharing-button--hackernews {\n  background-color: #FF6600;\n  border-color: #FF6600;\n}\n\n.resp-sharing-button--hackernews:hover\n.resp-sharing-button--hackernews:active {\n  background-color: #FB6200;\n  border-color: #FB6200;\n}',
+			'scriptSize': 4.6,
+			'requests': 3
+		}
 	}
 }
 
@@ -223,7 +236,8 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'reddit': 'https://reddit.com/submit/?url=' + url,
 			'email': 'mailto:?subject=' + text + '&body=' + url,
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
-			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url
+			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
+			'hackernews':'https://news.ycombinator.com/submitlink?u=' + url + '&t=' + text
 		}
 
 		for (var network in _data.networks) {
