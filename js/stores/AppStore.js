@@ -14,7 +14,7 @@ var _data = {
 		"solid": true,
 		"circle": false
 	},
-	"generalStyling": ".resp-sharing-button__link,\n.resp-sharing-button__icon {\n  display: inline-block\n}\n\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #fff;\n  margin: 0.5em\n}\n\n.resp-sharing-button {\n  border-radius: 5px;\n  transition: 25ms ease-out;\n  padding: 0.5em 0.75em;\n  font-family: Helvetica Neue,Helvetica,Arial,sans-serif\n}\n\n.resp-sharing-button__icon svg {\n  width: 1em;\n  height: 1em;\n  margin-right: 0.4em;\n  vertical-align: top\n}\n\n.resp-sharing-button--small svg {\n  margin: 0;\n  vertical-align: middle\n}\n\n/* Non solid icons get a stroke */\n.resp-sharing-button__icon {\n  stroke: #fff;\n  fill: none\n}\n\n/* Solid icons get a fill */\n.resp-sharing-button__icon--solid,\n.resp-sharing-button__icon--solidcircle {\n  fill: #fff;\n  stroke: none\n}\n\n.resp-sharing-button--twitter {\n  background-color: #55acee\n}\n\n.resp-sharing-button--twitter:hover {\n  background-color: #2795e9\n}\n\n.resp-sharing-button--pinterest {\n  background-color: #bd081c\n}\n\n.resp-sharing-button--pinterest:hover {\n  background-color: #8c0615\n}\n\n.resp-sharing-button--facebook {\n  background-color: #3b5998\n}\n\n.resp-sharing-button--facebook:hover {\n  background-color: #2d4373\n}\n\n.resp-sharing-button--tumblr {\n  background-color: #35465C\n}\n\n.resp-sharing-button--tumblr:hover {\n  background-color: #222d3c\n}\n\n.resp-sharing-button--reddit {\n  background-color: #5f99cf\n}\n\n.resp-sharing-button--reddit:hover {\n  background-color: #3a80c1\n}\n\n.resp-sharing-button--google {\n  background-color: #dd4b39\n}\n\n.resp-sharing-button--google:hover {\n  background-color: #c23321\n}\n\n.resp-sharing-button--linkedin {\n  background-color: #0077b5\n}\n\n.resp-sharing-button--linkedin:hover {\n  background-color: #046293\n}\n\n.resp-sharing-button--email {\n  background-color: #777\n}\n\n.resp-sharing-button--email:hover {\n  background-color: #5e5e5e\n}\n\n.resp-sharing-button--xing {\n  background-color: #1a7576\n}\n\n.resp-sharing-button--xing:hover {\n  background-color: #114c4c\n}\n\n.resp-sharing-button--whatsapp {\n  background-color: #25D366\n}\n\n.resp-sharing-button--whatsapp:hover {\n  background-color: #1da851\n}",
+	"generalStyling": ".resp-sharing-button__link,\n.resp-sharing-button__icon {\n  display: inline-block\n}\n\n.resp-sharing-button__link {\n  text-decoration: none;\n  color: #fff;\n  margin: 0.5em\n}\n\n.resp-sharing-button {\n  border-radius: 5px;\n  transition: 25ms ease-out;\n  padding: 0.5em 0.75em;\n  font-family: Helvetica Neue,Helvetica,Arial,sans-serif\n}\n\n.resp-sharing-button__icon svg {\n  width: 1em;\n  height: 1em;\n  margin-right: 0.4em;\n  vertical-align: top\n}\n\n.resp-sharing-button--small svg {\n  margin: 0;\n  vertical-align: middle\n}\n\n/* Non solid icons get a stroke */\n.resp-sharing-button__icon {\n  stroke: #fff;\n  fill: none\n}\n\n/* Solid icons get a fill */\n.resp-sharing-button__icon--solid,\n.resp-sharing-button__icon--solidcircle {\n  fill: #fff;\n  stroke: none\n}\n\n.resp-sharing-button--twitter {\n  background-color: #55acee\n}\n\n.resp-sharing-button--twitter:hover {\n  background-color: #2795e9\n}\n\n.resp-sharing-button--pinterest {\n  background-color: #bd081c\n}\n\n.resp-sharing-button--pinterest:hover {\n  background-color: #8c0615\n}\n\n.resp-sharing-button--facebook {\n  background-color: #3b5998\n}\n\n.resp-sharing-button--facebook:hover {\n  background-color: #2d4373\n}\n\n.resp-sharing-button--tumblr {\n  background-color: #35465C\n}\n\n.resp-sharing-button--tumblr:hover {\n  background-color: #222d3c\n}\n\n.resp-sharing-button--reddit {\n  background-color: #5f99cf\n}\n\n.resp-sharing-button--reddit:hover {\n  background-color: #3a80c1\n}\n\n.resp-sharing-button--google {\n  background-color: #dd4b39\n}\n\n.resp-sharing-button--google:hover {\n  background-color: #c23321\n}\n\n.resp-sharing-button--linkedin {\n  background-color: #0077b5\n}\n\n.resp-sharing-button--linkedin:hover {\n  background-color: #046293\n}\n\n.resp-sharing-button--email {\n  background-color: #777\n}\n\n.resp-sharing-button--email:hover {\n  background-color: #5e5e5e\n}\n\n.resp-sharing-button--xing {\n  background-color: #1a7576\n}\n\n.resp-sharing-button--xing:hover {\n  background-color: #114c4c\n}\n\n.resp-sharing-button--whatsapp {\n  background-color: #25D366\n}\n\n.resp-sharing-button--whatsapp:hover {\n  background-color: #1da851\n}\n\n.resp-sharing-button--telegram {\n  background-color: #64a9dc\n}\n\n.resp-sharing-button--telegram:hover {\n  background-color: #3b5998\n}",
 	"sizes": {
 		"small": false,
 		"medium": false,
@@ -152,6 +152,19 @@ var _data = {
 			'scriptSize': 15.1,
 			'requests': 1
 		},
+		'telegram': {
+			'visible': true,
+			'name': 'Telegram',
+			'icons': {
+				'normal': '\n   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xml:space="preserve" style="font-size:1.5em"><path stroke-width="20px" d="M386.898,117.316L117.615,221.179c-18.379,7.374-18.27,17.625-3.35,22.196l67.16,20.962l25.697,78.785  c3.124,8.623,1.584,12.043,10.639,12.043c6.988,0,10.088-3.186,13.98-6.988c2.475-2.422,17.17-16.709,33.578-32.662l69.859,51.615  c12.855,7.092,22.137,3.418,25.338-11.939l45.857-216.096C411.068,120.272,399.197,111.734,386.898,117.316z M191.965,259.521  l151.379-95.506c7.557-4.583,14.486-2.119,8.797,2.931L222.521,283.896l-5.047,53.83L191.965,259.521z"/></svg>',
+				'solid': '\n    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>',
+				'circle': '\n    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle cx="12" cy="12" r="11.5"/><path d="M15.84 9.5H13.5V8.48c0-.53.35-.65.6-.65h1.4v-2.3h-2.35c-2.3 0-2.65 1.7-2.65 2.8V9.5h-2v2h2v7h3v-7h2.1l.24-2z"/></svg>',
+				'solidcircle': '\n    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm3.6 11.5h-2.1v7h-3v-7h-2v-2h2V8.34c0-1.1.35-2.82 2.65-2.82h2.35v2.3h-1.4c-.25 0-.6.13-.6.66V9.5h2.34l-.24 2z"/></svg>'
+			},
+			'style': '.resp-sharing-button--telegram {\n  background-color: #64a9dc;\n  border-color: #64a9dc;\n}\n\n.resp-sharing-button--telegram:hover,\n.resp-sharing-button--telegram:active {\n  background-color: #3b5998;\n  border-color: #3b5998;\n}',
+			'scriptSize': 73.3,
+			'requests': 3
+		}
 	}
 }
 
@@ -223,7 +236,8 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'reddit': 'https://reddit.com/submit/?url=' + url,
 			'email': 'mailto:?subject=' + text + '&body=' + url,
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
-			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url
+			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
+			'telegram': 'https://telegram.me/share/url?url=' + url
 		}
 
 		for (var network in _data.networks) {

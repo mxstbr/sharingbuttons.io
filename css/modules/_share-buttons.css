@@ -122,3 +122,10 @@
 .resp-sharing-button--whatsapp:hover {
 	background-color: #1da851
 }
+.resp-sharing-button--telegram {
+	background-color: #3b5998
+}
+
+.resp-sharing-button--telegram:hover {
+	background-color: #2d4373
+}
