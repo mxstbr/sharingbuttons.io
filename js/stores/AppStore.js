@@ -236,7 +236,8 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'reddit': 'https://reddit.com/submit/?url=' + url,
 			'email': 'mailto:?subject=' + text + '&body=' + url,
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
-			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url
+			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
+			'telegram': 'https://telegram.me/share/url?url=' + url
 		}
 
 		for (var network in _data.networks) {
