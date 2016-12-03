@@ -128,9 +128,17 @@
 
 .resp-sharing-button--hackernews {
 	background-color: #FF6600
-} 
+}
 
 .resp-sharing-button--hackernews:hover,
 .resp-sharing-button--hackernews:focus {
-	background-color: #FB6200
+	background-color: #FB6200;
+}
+
+.resp-sharing-button--vk {
+    background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+    background-color: #43648c
 }
