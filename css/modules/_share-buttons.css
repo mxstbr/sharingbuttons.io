@@ -1,13 +1,16 @@
 /* SHARE BUTTONS START */
 .resp-sharing-button__link,
 .resp-sharing-button__icon {
-	display: inline-block
-}
+	display: inline-block;
+  }
 
 .resp-sharing-button__link {
 	text-decoration: none;
 	color: #fff;
 	margin: 0.5em
+}
+.resp-sharing-button--small {
+  margin: 0 8px;
 }
 
 .resp-sharing-button {
