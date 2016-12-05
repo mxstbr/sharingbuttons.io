@@ -142,3 +142,11 @@
 .resp-sharing-button--vk:hover {
     background-color: #43648c
 }
+
+.resp-sharing-button--telegram {
+  background-color: #54A9EB;
+}
+
+.resp-sharing-button--telegram:hover {
+  background-color: #4B97D1;
+}
