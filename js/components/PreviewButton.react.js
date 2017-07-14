@@ -21,6 +21,7 @@ var PreviewButton = React.createClass({
 			   key={ name + "share-link" }
 			   href={ network.link }
 			   target={ network.openInThisWindow ? "_self" : "_blank" }
+			   rel="noopener"
 				 aria-label={ shareText }>
 				<div key={ name + "share-button"} className={ "resp-sharing-button resp-sharing-button--" + id.toLowerCase() + " resp-sharing-button--" + this.props.size}>
 					{ icon }
