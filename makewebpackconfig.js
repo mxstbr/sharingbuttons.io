@@ -60,6 +60,12 @@ module.exports = function(options) {
       path: path.resolve(__dirname, 'build'),
       filename: "js/bundle.js"
     },
+    resolve: {
+        alias: {
+            react: 'preact-compat',
+            'react-dom': 'preact-compat'
+        }
+    },
     module: {
       loaders: [{
           test: /\.js$/, // Transform all .js files required somewhere within an entry point...

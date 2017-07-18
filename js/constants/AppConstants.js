@@ -1,4 +1,4 @@
-var keyMirror = require('react/lib/keyMirror');
+var keyMirror = obj => Object.keys(obj).reduce( (acc, key) => ((acc[key]=key), acc), {} );
 
 // Define actions
 module.exports = keyMirror({
