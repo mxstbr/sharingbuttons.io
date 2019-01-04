@@ -259,7 +259,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'tumblr': "https://www.tumblr.com/widgets/share/tool?posttype=link&title=" + text + "&caption=" + text + "&content=" + url + "&canonicalUrl=" + url + "&shareSource=tumblr_share_button",
 			'pinterest': 'https://pinterest.com/pin/create/button/?url=' + url + '&media=' + url + '&description=' + text,
 			'linkedin': 'https://www.linkedin.com/shareArticle?mini=true&url=' + url + '&title=' + text + '&summary=' + text + '&source=' + url,
-			'reddit': 'https://reddit.com/submit/?url=' + url,
+			'reddit': 'https://reddit.com/submit/?url=' + url + '&resubmit=true&title=' + text,
 			'email': 'mailto:?subject=' + text + '&body=' + url,
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
 			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
