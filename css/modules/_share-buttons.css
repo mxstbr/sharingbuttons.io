@@ -150,3 +150,11 @@
 .resp-sharing-button--telegram:hover {
   background-color: #4B97D1;
 }
+
+.resp-sharing-button--dreamwidth {
+	background-color: #C1272D
+}
+
+.resp-sharing-button--dreamwidth:hover {
+	background-color: #AE2329
+}
