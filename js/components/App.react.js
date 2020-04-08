@@ -59,18 +59,6 @@ var App = React.createClass({
 		}, 0);
 	},
 	_initAnalytics: function() {
-		window.owa_baseUrl = 'http://analytics.mxstbr.com/';
-		window.owa_cmds = window.owa_cmds || [];
-		window.owa_cmds.push(['setSiteId', '664af9a4b4b955434ee1980e56896ab7']);
-		window.owa_cmds.push(['trackPageView']);
-		window.owa_cmds.push(['trackClicks']);
-		window.owa_cmds.push(['trackDomStream']);
-		(function() {
-	    var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
-	    window.owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || window.owa_baseUrl.replace(/http:/, 'https:') : window.owa_baseUrl );
-	    _owa.src = window.owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
-	    var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
-	  }());
 	}
 });
 
