@@ -8,7 +8,7 @@ var assign = require('react/lib/Object.assign');
  * DATA
  */
 var _data = {
-	"url": "http://sharingbuttons.io",
+	"url": "https://sharingbuttons.io",
 	"text": "Super fast and easy Social Media Sharing Buttons. No JavaScript. No tracking.",
 	"icons": {
 		"solid": true,
@@ -240,7 +240,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 		var url = encodeURIComponent(_data.url);
 
 		var links = {
-			'facebook': 'https://facebook.com/sharer/sharer.php?u=' + url,
+			'facebook': 'https://www.facebook.com/sharer/sharer.php?u=' + url,
 			'twitter': 'https://twitter.com/intent/tweet/?text=' + text + '&url=' + url,
 			'tumblr': "https://www.tumblr.com/widgets/share/tool?posttype=link&title=" + text + "&caption=" + text + "&content=" + url + "&canonicalUrl=" + url + "&shareSource=tumblr_share_button",
 			'pinterest': 'https://pinterest.com/pin/create/button/?url=' + url + '&media=' + url + '&description=' + text,
@@ -250,7 +250,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
 			'xing': 'https://www.xing.com/app/user?op=share;url=' + url + ';title=' + text,
 			'whatsapp': 'whatsapp://send?text=' + text + '%20' + url,
 			'hackernews':'https://news.ycombinator.com/submitlink?u=' + url + '&t=' + text,
-			'vk': 'http://vk.com/share.php?title=' + text + '&url=' + url,
+			'vk': 'https://vk.com/share.php?title=' + text + '&url=' + url,
       'telegram': 'https://telegram.me/share/url?text=' + text + '&url=' + url,
 		}
 
